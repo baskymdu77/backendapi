@@ -1,13 +1,16 @@
 import os
 import logging
 import time
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException
+import base64
+from enum import Enum
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Query
 from fastapi.responses import JSONResponse
-from typing import Optional
+from typing import Optional, List
 from PyPDF2 import PdfReader
 from openai import OpenAI
 import io
 import httpx
+from PIL import Image
 
 # Configure logging
 logging.basicConfig(
@@ -25,7 +28,7 @@ def get_openai_api_key():
     if not api_key:
         logger.error("OpenAI API key not found in environment variables")
         raise HTTPException(status_code=500, detail="OpenAI API key not found in environment variables")
-    logger.info("Successfully retrieved OpenAI API key")
+    logger.info("Successfully retrieved OpenAI API key", api_key)
     return api_key
 
 # Initialize OpenAI client
@@ -45,6 +48,20 @@ def get_openai_client():
     except Exception as e:
         logger.error(f"Error initializing OpenAI client: {str(e)}")
         raise
+
+class FileType(str, Enum):
+    PDF = "pdf"
+    IMAGE = "image"
+    UNKNOWN = "unknown"
+
+# Determine file type based on extension
+def get_file_type(filename):
+    if filename.lower().endswith(('.pdf')):
+        return FileType.PDF
+    elif filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.tif')):
+        return FileType.IMAGE
+    else:
+        return FileType.UNKNOWN
 
 # Extract text from PDF
 def extract_text_from_pdf(pdf_file):
@@ -71,51 +88,111 @@ def extract_text_from_pdf(pdf_file):
         logger.error(f"Error extracting text from PDF: {str(e)}")
         raise HTTPException(status_code=400, detail=f"Error extracting text from PDF: {str(e)}")
 
-@router.post("/process-pdf")
-async def process_pdf(
+# Process image file for OpenAI vision API
+def process_image_for_vision(image_file):
+    logger.info("Processing image for vision API")
+    try:
+        # Open image using PIL
+        img = Image.open(io.BytesIO(image_file))
+        
+        # Convert to RGB if needed (handles RGBA, etc.)
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+        
+        # Save to bytes
+        img_byte_arr = io.BytesIO()
+        img.save(img_byte_arr, format='JPEG')
+        img_byte_arr = img_byte_arr.getvalue()
+        
+        # Encode as base64
+        base64_image = base64.b64encode(img_byte_arr).decode('utf-8')
+        logger.info(f"Successfully processed image, size: {len(base64_image)} bytes")
+        
+        return base64_image
+    except Exception as e:
+        logger.error(f"Error processing image: {str(e)}")
+        raise HTTPException(status_code=400, detail=f"Error processing image: {str(e)}")
+
+@router.post("/process-file")
+async def process_file(
     file: UploadFile = File(...),
-    prompt: str = Form(...)
+    prompt: str = Form(...),
+    model: str = Form("o4-mini"),
 ):
     """
-    Process a PDF file with a given prompt using OpenAI API.
+    Process a PDF or image file with a given prompt using OpenAI API.
     
-    - file: PDF file to process
-    - prompt: Instructions for processing the PDF content
+    - file: PDF or image file to process
+    - prompt: Instructions for processing the file content
+    - model: OpenAI model to use (default: o4-mini)
     """
     start_time = time.time()
-    request_id = f"pdf-{int(start_time)}"
-    logger.info(f"[{request_id}] Processing PDF request: filename={file.filename}, prompt_length={len(prompt)}")
+    request_id = f"file-{int(start_time)}"
+    logger.info(f"[{request_id}] Processing file request: filename={file.filename}, prompt_length={len(prompt)}")
     
     try:
-        # Read the PDF file
-        logger.info(f"[{request_id}] Reading PDF file")
+        # Read the file
+        logger.info(f"[{request_id}] Reading file")
         contents = await file.read()
         file_size = len(contents)
         logger.info(f"[{request_id}] File size: {file_size} bytes")
         
-        # Check if the file is a PDF
-        if not file.filename.lower().endswith('.pdf'):
-            logger.warning(f"[{request_id}] Invalid file format: {file.filename}")
-            raise HTTPException(status_code=400, detail="File must be a PDF")
+        # Determine file type
+        file_type = get_file_type(file.filename)
+        logger.info(f"[{request_id}] Detected file type: {file_type}")
         
-        # Extract text from PDF
-        logger.info(f"[{request_id}] Extracting text from PDF")
-        pdf_text = extract_text_from_pdf(contents)
+        if file_type == FileType.UNKNOWN:
+            logger.warning(f"[{request_id}] Unsupported file format: {file.filename}")
+            raise HTTPException(status_code=400, detail="Unsupported file format. Please upload a PDF or image file.")
         
         # Initialize OpenAI client
         logger.info(f"[{request_id}] Initializing OpenAI client")
         client = get_openai_client()
-        
-        # Call OpenAI API with the PDF text and prompt
-        logger.info(f"[{request_id}] Calling OpenAI API with PDF content and prompt")
         api_start_time = time.time()
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant that processes PDF content."},
-                {"role": "user", "content": f"PDF Content: {pdf_text}\n\nPrompt: {prompt}"}
-            ]
-        )
+        
+        # Process based on file type
+        if file_type == FileType.PDF:
+            # Extract text from PDF
+            logger.info(f"[{request_id}] Extracting text from PDF")
+            pdf_text = extract_text_from_pdf(contents)
+            
+            # Call OpenAI API with the PDF text and prompt
+            logger.info(f"[{request_id}] Calling OpenAI API with PDF content and prompt")
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant that processes PDF content."},
+                    {"role": "user", "content": f"PDF Content: {pdf_text}\n\nPrompt: {prompt}"}
+                ]
+            )
+        
+        elif file_type == FileType.IMAGE:
+            # Process image for vision API
+            logger.info(f"[{request_id}] Processing image for vision API")
+            base64_image = process_image_for_vision(contents)
+            
+            # Call OpenAI Vision API with the image and prompt
+            logger.info(f"[{request_id}] Calling OpenAI Vision API with image and prompt")
+            response = client.chat.completions.create(
+                model=model,  # Use vision model for images
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant that analyzes images."},
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": prompt},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/jpeg;base64,{base64_image}"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                max_tokens=1000
+            )
+        
         api_duration = time.time() - api_start_time
         logger.info(f"[{request_id}] OpenAI API call completed in {api_duration:.2f} seconds")
         
@@ -124,12 +201,13 @@ async def process_pdf(
         logger.info(f"[{request_id}] Request completed successfully in {total_duration:.2f} seconds")
         return {
             "filename": file.filename,
+            "file_type": file_type,
             "prompt": prompt,
             "response": response.choices[0].message.content
         }
     
     except Exception as e:
-        logger.error(f"[{request_id}] Error processing PDF: {str(e)}")
+        logger.error(f"[{request_id}] Error processing file: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/prompt-only")
