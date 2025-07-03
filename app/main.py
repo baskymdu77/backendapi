@@ -1,6 +1,12 @@
 from fastapi import FastAPI
 from app.routes import hello, openai_api
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.environ.get("OPENAI_API_KEY")
+print(api_key)
 
 app = FastAPI(
     title="Construction Management API",
