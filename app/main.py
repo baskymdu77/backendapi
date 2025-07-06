@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import hello, openai_api
+from app.routes import hello, openai_api, home_depot_api
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
@@ -26,3 +26,4 @@ app.add_middleware(
 # Include routers
 app.include_router(hello.router)
 app.include_router(openai_api.router)
+app.include_router(home_depot_api.router)
