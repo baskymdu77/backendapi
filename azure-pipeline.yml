@@ -1,0 +1,72 @@
+trigger:
+- main  # or your desired branch
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  vm_host: var.api_host
+  vm_user: var.api_user
+  vm_key: var.api_priv_key  # Mark this as a secret variable
+
+stages:
+- stage: Deploy
+  jobs:
+  - job: DeployToVM
+    steps:
+    - task: CopyFilesOverSSH@0
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        sourceFolder: '$(System.DefaultWorkingDirectory)/construction_manage_api'
+        contents: '**'
+        targetFolder: '/home/$(vm_user)/construction_manage_api'
+
+    - task: SSH@0
+      displayName: 'Create virtual environment'
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        runOptions: 'commands'
+        commands: |
+          cd construction_manage_api
+          python3 -m venv venv
+
+    - task: SSH@0
+      displayName: 'Activate virtual environment and install dependencies'
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        runOptions: 'commands'
+        commands: |
+          cd construction_manage_api
+          source venv/bin/activate
+          pip install -r requirements-windows.txt
+
+    - task: SSH@0
+      displayName: 'Make install.sh executable and run it'
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        runOptions: 'commands'
+        commands: |
+          cd construction_manage_api
+          chmod +x install.sh
+          ./install.sh
+
+    - task: SSH@0
+      displayName: 'Stop existing gunicorn if running'
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        runOptions: 'commands'
+        commands: |
+          pkill gunicorn || true
+
+    - task: SSH@0
+      displayName: 'Start gunicorn'
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        runOptions: 'commands'
+        commands: |
+          cd construction_manage_api
+          source venv/bin/activate
+          nohup gunicorn app.main:app \
+            --workers 4 \
+            --worker-class uvicorn.workers.UvicornWorker \
+            --bind 0.0.0.0:8000 > gunicorn.log 2>&1 &
