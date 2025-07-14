@@ -35,14 +35,6 @@ stages:
         sshEndpoint: 'Home-api-svc'
         runOptions: inline
         inline: |
-          cd /home/azureuser/construction_manage_api
-
-          echo ">>> Building Docker image..."
-                sudo docker build -t homeapi .
-
-          echo ">>> Stopping old container (if running)..."
-                sudo docker stop backend || true
-                sudo docker rm backend || true
-
-          echo ">>> Running new container..."
-                sudo docker run -d --name backend -p 8001:8001 homeapi
+          cd '/home/azureuser/construction_manage_api'
+          sudo chmod +x docker-deploy.sh
+          sudo ./docker-deploy.sh
