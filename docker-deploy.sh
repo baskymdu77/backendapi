@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e  # Fail on any error
+set -euo pipefail  
 set -x  # Print all commands (for debug trace)
 
 echo "📁 Navigating to project directory..."
