@@ -19,7 +19,7 @@ stages:
         sshEndpoint: 'Home-api-svc'
         sourceFolder: '$(System.DefaultWorkingDirectory)/construction_manage_api'
         contents: '**'
-        targetFolder: '/home/$(vm_user)/construction_manage_api'
+        targetFolder: '/home/azureuser/construction_manage_api'
 
     - task: SSH@0
       displayName: 'Create virtual environment'
