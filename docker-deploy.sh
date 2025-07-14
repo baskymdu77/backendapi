@@ -3,7 +3,7 @@ echo "📁 Navigating to project directory..."
 cd /home/azureuser/construction_manage_api  # Change this to your actual path
 
 echo "🛠 Building Docker image..."
-docker build -t homeapi .
+docker build -t homeapi .  2>&1 | grep -v '^\+' | tee docker_build_clean.log
 
 echo "🧼 Stopping and removing existing container (if any)..."
 docker stop backend || true
