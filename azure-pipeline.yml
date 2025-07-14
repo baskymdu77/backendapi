@@ -34,4 +34,4 @@ stages:
       inputs:
         sshEndpoint: 'Home-api-svc'
         runOptions: 'script'
-        scriptpath: './home/azureuser/construction_manage_api/docker-deploy.sh'
+        scriptpath: '$(Build.SourcesDirectory)/construction_manage_api/docker-deploy.sh'
