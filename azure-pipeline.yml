@@ -24,7 +24,7 @@ stages:
     - task: SSH@0
       name: DockerDeploy
       inputs:
-        sshEndpoint: 'docker-deploy-ssh'
+        sshEndpoint: 'Home-api-svc'
         runOptions: inline
         inline: |
           cd /home/azureuser/homeapi-src
