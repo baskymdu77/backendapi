@@ -17,7 +17,7 @@ stages:
     - task: CopyFilesOverSSH@0
       inputs:
         sshEndpoint: 'Home-api-svc'
-        sourceFolder: '$(System.DefaultWorkingDirectory)/construction_manage_api'
+        sourceFolder: '$(System.DefaultWorkingDirectory)'
         contents: '**'
         targetFolder: '/home/azureuser/construction_manage_api'
 
