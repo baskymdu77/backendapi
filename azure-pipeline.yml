@@ -5,9 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  vm_host: var.api_host
-  vm_user: var.api_user
-  vm_key: var.api_priv_key
+  - group: backend-home-api
 
 stages:
 - stage: Deploy
@@ -20,6 +18,16 @@ stages:
         sourceFolder: '$(System.DefaultWorkingDirectory)'
         contents: '**'
         targetFolder: '/home/azureuser/construction_manage_api'
+
+
+    - task: SSH@0
+      name: Adding env
+      inputs:
+        sshEndpoint: 'Home-api-svc'
+        runOptions: inline
+        inline: |
+           sudo echo "Creating .env file..."
+           sudo echo "OPENAI_API_KEY=$(API_KEY)" >> .env
 
     - task: SSH@0
       name: DockerDeploy
@@ -37,4 +45,4 @@ stages:
                 sudo docker rm backend || true
 
           echo ">>> Running new container..."
-                sudo docker run -d --name backend -p 80:8000 homeapi
+                sudo docker run -d --name backend -p 8001:8001 homeapi
