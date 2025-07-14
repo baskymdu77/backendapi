@@ -1,7 +1,4 @@
 #!/bin/bash
-set -euo pipefail  
-set -x  # Print all commands (for debug trace)
-
 echo "📁 Navigating to project directory..."
 cd /home/azureuser/construction_manage_api  # Change this to your actual path
 
