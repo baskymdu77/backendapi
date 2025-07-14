@@ -21,7 +21,7 @@ stages:
 
 
     - task: SSH@0
-      name: Adding env
+      name: Env
       inputs:
         sshEndpoint: 'Home-api-svc'
         runOptions: inline
