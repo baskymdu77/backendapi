@@ -33,5 +33,8 @@ stages:
       name: DockerDeploy
       inputs:
         sshEndpoint: 'Home-api-svc'
-        runOptions: 'script'
-        scriptpath: '$(Build.SourcesDirectory)/construction_manage_api/docker-deploy.sh'
+        runOptions: 'inline'
+        inline: |
+          cd '/home/azureuser/construction_manage_api'
+          sudo chmod +x docker-deploy.sh
+          sudo ./docker-deploy.sh
