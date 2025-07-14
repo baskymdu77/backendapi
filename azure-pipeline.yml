@@ -22,52 +22,19 @@ stages:
         targetFolder: '/home/azureuser/construction_manage_api'
 
     - task: SSH@0
-      displayName: 'Create virtual environment'
+      name: DockerDeploy
       inputs:
-        sshEndpoint: 'Home-api-svc'
-        runOptions: 'commands'
-        commands: |
-          cd construction_manage_api
-          sudo python3 -m venv venv
+        sshEndpoint: 'docker-deploy-ssh'
+        runOptions: inline
+        inline: |
+          cd /home/azureuser/homeapi-src
 
-    # - task: SSH@0
-    #   displayName: 'Activate virtual environment and install dependencies'
-    #   inputs:
-    #     sshEndpoint: 'Home-api-svc'
-    #     runOptions: 'commands'
-    #     commands: |
-    #       cd construction_manage_api
-    #       sudo source venv/bin/activate
-    #       sudo pip install -r requirements-windows.txt
+          echo ">>> Building Docker image..."
+                docker build -t homeapi .
 
-    - task: SSH@0
-      displayName: 'Make install.sh executable and run it'
-      inputs:
-        sshEndpoint: 'Home-api-svc'
-        runOptions: 'commands'
-        commands: |
-          cd construction_manage_api
-          sudo source venv/bin/activate
-          sudo chmod +x install.sh
-          sudo ./install.sh
+          echo ">>> Stopping old container (if running)..."
+                docker stop backend || true
+                docker rm backend || true
 
-    - task: SSH@0
-      displayName: 'Stop existing gunicorn if running'
-      inputs:
-        sshEndpoint: 'Home-api-svc'
-        runOptions: 'commands'
-        commands: |
-          pkill gunicorn || true
-
-    - task: SSH@0
-      displayName: 'Start gunicorn'
-      inputs:
-        sshEndpoint: 'Home-api-svc'
-        runOptions: 'commands'
-        commands: |
-          cd construction_manage_api
-          source venv/bin/activate
-          nohup gunicorn app.main:app \
-            --workers 4 \
-            --worker-class uvicorn.workers.UvicornWorker \
-            --bind 0.0.0.0:8000 > gunicorn.log 2>&1 &
+          echo ">>> Running new container..."
+                docker run -d --name backend -p 80:8000 homeapi
