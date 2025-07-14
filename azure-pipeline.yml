@@ -27,14 +27,14 @@ stages:
         sshEndpoint: 'Home-api-svc'
         runOptions: inline
         inline: |
-          cd /home/azureuser/homeapi-src
+          cd /home/azureuser/construction_manage_api
 
           echo ">>> Building Docker image..."
-                docker build -t homeapi .
+                sudo docker build -t homeapi .
 
           echo ">>> Stopping old container (if running)..."
-                docker stop backend || true
-                docker rm backend || true
+                sudo docker stop backend || true
+                sudo docker rm backend || true
 
           echo ">>> Running new container..."
-                docker run -d --name backend -p 80:8000 homeapi
+                sudo docker run -d --name backend -p 80:8000 homeapi
