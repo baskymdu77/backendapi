@@ -28,17 +28,17 @@ stages:
         runOptions: 'commands'
         commands: |
           cd construction_manage_api
-          python3 -m venv venv
+          sudo python3 -m venv venv
 
-    - task: SSH@0
-      displayName: 'Activate virtual environment and install dependencies'
-      inputs:
-        sshEndpoint: 'Home-api-svc'
-        runOptions: 'commands'
-        commands: |
-          cd construction_manage_api
-          source venv/bin/activate
-          pip install -r requirements-windows.txt
+    # - task: SSH@0
+    #   displayName: 'Activate virtual environment and install dependencies'
+    #   inputs:
+    #     sshEndpoint: 'Home-api-svc'
+    #     runOptions: 'commands'
+    #     commands: |
+    #       cd construction_manage_api
+    #       sudo source venv/bin/activate
+    #       sudo pip install -r requirements-windows.txt
 
     - task: SSH@0
       displayName: 'Make install.sh executable and run it'
@@ -47,8 +47,9 @@ stages:
         runOptions: 'commands'
         commands: |
           cd construction_manage_api
-          chmod +x install.sh
-          ./install.sh
+          sudo source venv/bin/activate
+          sudo chmod +x install.sh
+          sudo ./install.sh
 
     - task: SSH@0
       displayName: 'Stop existing gunicorn if running'
