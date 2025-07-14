@@ -13,6 +13,6 @@ docker stop backend || true
 docker rm backend || true
 
 echo "🚀 Running new container..."
-docker run -d --name backend -p 80:8000 homeapi
+docker run -d --name backend -p 8001:8001 homeapi
 
 echo "✅ Deployment complete."
