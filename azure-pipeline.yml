@@ -7,7 +7,7 @@ pool:
 variables:
   vm_host: var.api_host
   vm_user: var.api_user
-  vm_key: var.api_priv_key  # Mark this as a secret variable
+  vm_key: var.api_priv_key
 
 stages:
 - stage: Deploy
