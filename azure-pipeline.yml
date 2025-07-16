@@ -28,7 +28,8 @@ stages:
         inline: |
            cd '/home/azureuser/construction_manage_api'
            sudo echo "Creating .env file..."
-           sudo echo "OPENAI_API_KEY=$(API_KEY)" >> .env
+           sudo echo "OPENAI_API_KEY=$(API_KEY)" > .env
+
            sudo echo "SERPAPI_API_KEY=$(SERPAPI_API_KEY)" >> .env
 
     - task: SSH@0
