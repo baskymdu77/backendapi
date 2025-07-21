@@ -11,7 +11,9 @@ print(api_key)
 app = FastAPI(
     title="Construction Management API",
     description="API for construction management with OpenAI integration",
-    version="0.1.0"
+    version="0.1.0",
+    # Add a prefix to all routes
+    root_path="/api/v1"
 )
 
 # Configure CORS
