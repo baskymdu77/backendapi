@@ -285,92 +285,52 @@ class HomeDepotScraper:
                     model_number = text.split("Model#")[-1].strip()
                     break
           
-            # Extract rating and reviews - updated selectors
-            rating_selectors = [
-                'span[data-testid="rating"]',
-                'span[data-automation-id="rating"]',
-                'div[data-testid="rating-stars"]',
-                '.rating',
-                '.stars',
-                '.star-rating',
-                'span[aria-label*="star"]',
-                'span[aria-label*="rating"]',
-                '.review-stars',
-                '.product-rating',
-                'div.sui-flex[aria-label*="star"]'  # Home Depot rating containers
-            ]
-            
+            # Extract rating and reviews from the specific Home Depot structure
+            # First try to find the ratings link which contains both rating and review count
             rating = 0.0
-            for selector in rating_selectors:
-                rating_elem = container.select_one(selector)
-                if rating_elem:
-                    # Try to get rating from aria-label first
-                    aria_label = rating_elem.get('aria-label', '')
-                    if aria_label:
-                        rating_match = re.search(r'(\d+\.?\d*)', aria_label)
-                        if rating_match:
-                            rating = float(rating_match.group(1))
-                            if position == 1:
-                                logger.info(f"Found rating {rating} from aria-label: {aria_label}")
-                            break
-                    
-                    # Try to get rating from text content
-                    rating_text = rating_elem.get_text(strip=True)
-                    if rating_text:
-                        rating_match = re.search(r'(\d+\.?\d*)', rating_text)
-                        if rating_match:
-                            rating = float(rating_match.group(1))
-                            break
-            
-            # Extract reviews count
-            review_selectors = [
-                'span[data-testid="reviews"]',
-                'span[data-automation-id="reviews"]',
-                'span[data-testid="review-count"]',
-                'a[data-testid="reviews-link"]',
-                '.review-count',
-                '.reviews-count',
-                '.product-reviews',
-                'span:contains("review")',
-                'a:contains("review")',
-                'span.sui-text-sm:contains("review")',  # Reviews often in small text
-                'a.sui-btn-text:contains("review")'  # Review links as text buttons
-            ]
-            
             reviews = 0
-            for selector in review_selectors:
-                if ':contains(' in selector:
-                    # Handle special :contains selector
-                    review_elems = container.find_all(['span', 'a'])
-                    for elem in review_elems:
-                        text = elem.get_text(strip=True).lower()
-                        if 'review' in text:
-                            reviews_match = re.search(r'(\d+)', text)
-                            if reviews_match:
-                                reviews = int(reviews_match.group(1))
-                                break
-                    if reviews > 0:
-                        break
-                else:
-                    reviews_elem = container.select_one(selector)
-                    if reviews_elem:
-                        reviews_text = reviews_elem.get_text(strip=True)
-                        reviews_match = re.search(r'(\d+)', reviews_text)
-                        if reviews_match:
-                            reviews = int(reviews_match.group(1))
-                            break
             
+            # Look for the specific Home Depot ratings element
+            ratings_link = container.select_one('a[data-testid="product-pod__ratings-link"]')
+            if ratings_link:
+                print("Found ratings link")
+                # Extract rating from aria-label in span
+                rating_span = ratings_link.select_one('span[aria-label*="Stars"]')
+                if rating_span:
+                    aria_label = rating_span.get('aria-label', '')
+                    print(f"Rating aria-label: {aria_label}")
+                    rating_match = re.search(r'(\d+(?:\.\d+)?)', aria_label)
+                    if rating_match:
+                        rating = float(rating_match.group(1))
+                        print(f"Extracted rating: {rating}")
+                
+                # Extract the review count and exact rating from the text
+                rating_text_span = ratings_link.select_one('span.sui-font-regular.sui-text-xs span.sui-font-regular.sui-text-xs')
+                if rating_text_span:
+                    rating_text = rating_text_span.get_text(strip=True)
+                    print(f"Rating text: {rating_text}")
+                    # Text format is typically like "(4.2 / 501)" where 4.2 is rating and 501 is review count
+                    rating_review_match = re.search(r'\(\s*(\d+(?:\.\d+)?)\s*\/\s*(\d+)\s*\)', rating_text)
+                    if rating_review_match:
+                        rating = float(rating_review_match.group(1))
+                        reviews = int(rating_review_match.group(2))
+                        print(f"Extracted rating: {rating}, reviews: {reviews}")
+                
+                # If we still don't have the review count, look for it in subtle text
+                if reviews == 0:
+                    review_span = ratings_link.select_one('span.sui-text-subtle')
+                    if review_span:
+                        review_text = review_span.get_text(strip=True)
+                        print(f"Review text: {review_text}")
+                        review_match = re.search(r'(\d+)', review_text)
+                        if review_match:
+                            reviews = int(review_match.group(1))
+                            print(f"Extracted reviews: {reviews}")
+            
+        
             # Build full product URL
             full_link = href if href.startswith('http') else f"https://www.homedepot.com{href}"
-            
-            # Debug logging for first product
-            if position == 1:
-                logger.info(f"Product {position}: title='{title}', price={price}, brand='{brand}', model='{model_number}'")
-                logger.info(f"Product {position}: rating={rating}, reviews={reviews}, thumbnails_count={len(thumbnails)}")
-                logger.info(f"Product {position}: product_id='{product_id}', link='{href}'")
-                if price_range:
-                    logger.info(f"Product {position}: price_range='{price_range}'")
-            
+
             # Build product data
             product = {
                 "position": position,
