@@ -66,12 +66,6 @@ class HomeDepotScraper:
                 # Extract products
                 products = await self._extract_products(soup, request_id)
                 
-                # # Extract search information
-                # search_info = await self._extract_search_info(soup, location)
-                
-                # # Extract filters
-                # filters = await self._extract_filters(soup)
-                
                 # Build response in SerpAPI format
                 elapsed_time = time.time() - start_time
                 
@@ -105,7 +99,7 @@ class HomeDepotScraper:
         
         logger.info(f"[{request_id}] Found {len(product_containers)} product containers")
         
-        for idx, container in enumerate(product_containers[:24]):  # Limit to 24 products
+        for idx, container in enumerate(product_containers[:1]):  # Limit to 24 products
             try:
                 product = await self._extract_single_product(container, idx + 1)
                 if product:
@@ -188,6 +182,7 @@ class HomeDepotScraper:
             
             # Extract price - improved logic for variable pricing
             price_selectors = [
+                "#standard-price",
                 'span[data-testid="price"]',
                 'span[data-automation-id="product-price"]',
                 'div[data-testid="price-range"]',  # For price ranges
@@ -215,7 +210,7 @@ class HomeDepotScraper:
                     price_elem = container.select_one(selector)
                     if price_elem:
                         price_text = price_elem.get_text(strip=True)
-                        
+                        print(f"Price text: {price_text}")
                         # Check for price ranges (e.g., "$10.99 - $25.99" or "Starting at $15.99")
                         if 'starting' in price_text.lower() or 'from' in price_text.lower():
                             # Extract the starting price
@@ -277,7 +272,7 @@ class HomeDepotScraper:
                             if 0.01 <= parsed_price <= 50000:  # Reasonable price range
                                 price = parsed_price
                                 break
-            
+            print(f"Price: {price}")
             # Extract thumbnail image
             img_selectors = [
                 'img[data-testid="product-image"]',
@@ -310,18 +305,7 @@ class HomeDepotScraper:
             
             # Extract brand - improved extraction with multiple strategies
             brand_selectors = [
-                'span[data-testid="brand"]',
-                'span[data-automation-id="brand"]',
-                'a[data-testid="brand-link"]',
-                '.brand',
-                '.product-brand',
-                '.manufacturer',
-                'span.brand-name',
-                '[data-brand]',
-                'span.sui-text-subtle',  # Home Depot uses this for secondary info
-                'span.sui-text-sm.sui-text-subtle',
-                '.brand-link',
-                'div[data-testid="brand-info"]'
+                'span[data-testid="attribute-brandname-inline"]'
             ]
             
             brand = "Unknown Brand"
@@ -335,61 +319,69 @@ class HomeDepotScraper:
                         brand = brand_text
                         break
             
-            # If no brand found, try extracting from title
-            if brand == "Unknown Brand":
-                # Common brand patterns in titles
-                brand_patterns = [
-                    r'^([A-Z][A-Za-z\s&]+?)\s+[A-Z]',  # Brand at start of title
-                    r'by\s+([A-Z][A-Za-z\s&]+)',      # "by BrandName"
-                    r'([A-Z][A-Z\s]+)\s+\d',          # All caps brand before model number
-                ]
-                
-                for pattern in brand_patterns:
-                    brand_match = re.search(pattern, title)
-                    if brand_match:
-                        potential_brand = brand_match.group(1).strip()
-                        # Filter out common non-brand words
-                        if potential_brand.lower() not in ['the', 'with', 'for', 'and', 'model', 'item', 'product']:
-                            brand = potential_brand
-                            break
-            
-            # If still no brand, look for it in any text within the container
-            if brand == "Unknown Brand":
-                container_text = container.get_text()
-                # Look for common brand indicators
-                brand_indicators = re.findall(r'(?:Brand|Manufacturer|Made by)\s*:?\s*([A-Za-z][A-Za-z\s&]+)', container_text, re.IGNORECASE)
-                if brand_indicators:
-                    brand = brand_indicators[0].strip()
-            
+        
             # Extract model number - improved extraction with pattern matching
             model_selectors = [
+                'div[data-component*="ProductDetailsModelCollection"] span',  # Based on Home Depot structure
+                'div[data-component*="model"] span',
                 'span[data-testid="model"]',
                 'span[data-automation-id="model"]',
                 'span[data-testid="model-number"]',
                 'span[data-testid="sku"]',
+                'span[data-testid="item-number"]',
                 '.model',
                 '.model-number',
                 '.product-model',
                 '.sku',
                 '.product-sku',
                 'span.sui-text-xs.sui-text-subtle',  # Model numbers often in small subtle text
-                'div[data-testid="product-info"] span'
+                'span.sui-text-sm.sui-text-subtle',
+                'div[data-testid="product-info"] span',
+                'div.sui-flex span:contains("Model")',
+                'div.sui-flex span:contains("#")',
+                'div.sui-flex span:contains("SKU")',
+                'div.sui-flex span:contains("Item")'  # Home Depot uses "Item #" format
             ]
             
             model_number = "N/A"
             
             # Try specific model selectors first
             for selector in model_selectors:
-                model_elems = container.select(selector)  # Use select to get all matches
-                for model_elem in model_elems:
-                    model_text = model_elem.get_text(strip=True)
-                    if model_text and len(model_text) > 1:
-                        # Check if this looks like a model number
-                        if re.search(r'[A-Z0-9]{3,}', model_text) or 'model' in model_text.lower():
-                            model_number = model_text
-                            break
-                if model_number != "N/A":
-                    break
+                if ':contains(' in selector:
+                    # Handle special :contains selector manually
+                    search_term = selector.split(':contains("')[1].split('")')[0]
+                    base_selector = selector.split(':contains(')[0]
+                    model_elems = container.select(base_selector)
+                    for model_elem in model_elems:
+                        if search_term.lower() in model_elem.get_text().lower():
+                            model_text = model_elem.get_text(strip=True)
+                            if model_text and len(model_text) > 1:
+                                # Extract model number from text containing the search term
+                                if search_term == 'Model':
+                                    model_match = re.search(r'Model[\s#:]*([A-Z0-9][A-Z0-9\-_]{2,})', model_text, re.IGNORECASE)
+                                elif search_term == '#':
+                                    model_match = re.search(r'#([A-Z0-9][A-Z0-9\-_]{2,})', model_text)
+                                elif search_term in ['SKU', 'Item']:
+                                    model_match = re.search(rf'{search_term}[\s#:]*([A-Z0-9][A-Z0-9\-_]{{2,}})', model_text, re.IGNORECASE)
+                                else:
+                                    model_match = None
+                                
+                                if model_match:
+                                    model_number = model_match.group(1)
+                                    break
+                    if model_number != "N/A":
+                        break
+                else:
+                    model_elems = container.select(selector)  # Use select to get all matches
+                    for model_elem in model_elems:
+                        model_text = model_elem.get_text(strip=True)
+                        if model_text and len(model_text) > 1:
+                            # Check if this looks like a model number
+                            if re.search(r'[A-Z0-9]{3,}', model_text) or 'model' in model_text.lower():
+                                model_number = model_text
+                                break
+                    if model_number != "N/A":
+                        break
             
             # If no model found, search for model patterns in container text
             if model_number == "N/A":
@@ -510,7 +502,8 @@ class HomeDepotScraper:
                 "model_number": model_number,
                 "price": price,
                 "rating": rating,
-                "reviews": reviews
+                "reviews": reviews,
+                "html": str(container)
             }
             
             # Add price range info if available
@@ -543,61 +536,6 @@ class HomeDepotScraper:
             logger.warning(f"Error extracting single product: {str(e)}")
             return None
 
-    async def _extract_search_info(self, soup: BeautifulSoup, location: str) -> Dict[str, Any]:
-        """Extract search information"""
-        # Try to find total results
-        results_elem = soup.find('span', class_=re.compile(r'results-count|total-results'))
-        total_results = 0
-        
-        if results_elem:
-            results_text = results_elem.get_text(strip=True)
-            results_match = re.search(r'(\d+(?:,\d+)*)', results_text)
-            if results_match:
-                total_results = int(results_match.group(1).replace(',', ''))
-        
-        # Mock store information based on location
-        store_info = self._get_store_info(location)
-        
-        return {
-            "results_state": "Results for exact spelling",
-            "total_results": total_results,
-            "store_id": store_info["store_id"],
-            "store_name": store_info["store_name"]
-        }
-
-    async def _extract_filters(self, soup: BeautifulSoup) -> List[Dict[str, Any]]:
-        """Extract filter information"""
-        filters = []
-        
-        # Mock common filters based on typical Home Depot structure
-        mock_filters = [
-            {
-                "key": "Review Rating",
-                "value": [
-                    {"name": "4 & Up", "count": "5731", "value": "bwo5o", "link": "https://www.homedepot.com/b/Highly-Rated/"},
-                    {"name": "3 & Up", "count": "6581", "value": "bwo5n", "link": "https://www.homedepot.com/b/"},
-                ]
-            },
-            {
-                "key": "Brand",
-                "value": [
-                    {"name": "American Craftsman", "count": "163", "value": "aso", "link": "https://www.homedepot.com/b/American-Craftsman/"},
-                    {"name": "TAFCO WINDOWS", "count": "113", "value": "53q", "link": "https://www.homedepot.com/b/TAFCO-WINDOWS/"},
-                    {"name": "JELD-WEN", "count": "976", "value": "2he", "link": "https://www.homedepot.com/b/JELD-WEN/"},
-                ]
-            },
-            {
-                "key": "Price",
-                "value": [
-                    {"name": "$0 - $50", "count": "422", "value": "12kx", "link": "https://www.homedepot.com/b/"},
-                    {"name": "$50 - $100", "count": "586", "value": "12l2", "link": "https://www.homedepot.com/b/"},
-                    {"name": "$100 - $200", "count": "905", "value": "12l4", "link": "https://www.homedepot.com/b/"},
-                ]
-            }
-        ]
-        
-        return mock_filters
-
     def _parse_price(self, price_text: str) -> float:
         """Parse price from text with improved regex"""
         if not price_text:
@@ -629,18 +567,6 @@ class HomeDepotScraper:
                     continue
         
         return 0.0
-
-    def _get_store_info(self, zip_code: str) -> Dict[str, str]:
-        """Get store information based on ZIP code"""
-        # Mock store data - in real implementation, this would lookup actual stores
-        store_mapping = {
-            "04401": {"store_id": "2414", "store_name": "Bangor"},
-            "10001": {"store_id": "1234", "store_name": "Manhattan"},
-            "90210": {"store_id": "5678", "store_name": "Beverly Hills"},
-            "60601": {"store_id": "9012", "store_name": "Chicago"},
-        }
-        
-        return store_mapping.get(zip_code, {"store_id": "2414", "store_name": "Bangor"})
 
 # Initialize scraper
 scraper = HomeDepotScraper()
@@ -677,106 +603,3 @@ async def search_home_depot_products(
         logger.error(f"Unexpected error in search endpoint: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error during search")
 
-@router.get("/product/{product_id}")
-async def get_product_details(
-    product_id: str,
-    location: Optional[str] = Query("04401", description="ZIP code for location-based pricing and availability")
-):
-    """
-    Get detailed information for a specific Home Depot product
-    """
-    request_id = str(uuid.uuid4())[:8]
-    start_time = time.time()
-    
-    logger.info(f"[{request_id}] Getting product details for ID: {product_id}")
-    
-    try:
-        # Build product URL
-        product_url = f"https://www.homedepot.com/p/{product_id}"
-        
-        cookies = {
-            'THD_CACHE_NAV_SESSION': '1',
-            'THD_SESSION': f'zipCode={location}',
-            'THD_PERSIST': f'C4%3D{location}%2BUS',
-            'zipCode': location
-        }
-        
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.get(product_url, headers=scraper.headers, cookies=cookies)
-            response.raise_for_status()
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # Extract detailed product information
-            product_details = await _extract_product_details(soup, product_id, request_id)
-            
-            elapsed_time = time.time() - start_time
-            logger.info(f"[{request_id}] Product details retrieved in {elapsed_time:.2f}s")
-            
-            return product_details
-            
-    except httpx.HTTPError as e:
-        logger.error(f"[{request_id}] HTTP error getting product details: {str(e)}")
-        raise HTTPException(status_code=404, detail=f"Product not found: {product_id}")
-    except Exception as e:
-        logger.error(f"[{request_id}] Error getting product details: {str(e)}")
-        raise HTTPException(status_code=500, detail="Failed to retrieve product details")
-
-async def _extract_product_details(soup: BeautifulSoup, product_id: str, request_id: str) -> Dict[str, Any]:
-    """Extract detailed product information from product page"""
-    try:
-        # Extract title
-        title_elem = soup.find('h1', {'data-testid': 'product-title'}) or soup.find('h1')
-        title = title_elem.get_text(strip=True) if title_elem else "N/A"
-        
-        # Extract price
-        price_elem = soup.find('span', {'data-testid': 'price'}) or \
-                    soup.find('span', class_=re.compile(r'price'))
-        price_text = price_elem.get_text(strip=True) if price_elem else "0"
-        price = scraper._parse_price(price_text)
-        
-        # Extract brand
-        brand_elem = soup.find('span', {'data-testid': 'product-brand'})
-        brand = brand_elem.get_text(strip=True) if brand_elem else "N/A"
-        
-        # Extract model number
-        model_elem = soup.find('span', {'data-testid': 'product-model'})
-        model_number = model_elem.get_text(strip=True) if model_elem else "N/A"
-        
-        # Extract description
-        desc_elem = soup.find('div', {'data-testid': 'product-description'})
-        description = desc_elem.get_text(strip=True) if desc_elem else ""
-        
-        # Extract specifications
-        specs = {}
-        spec_section = soup.find('div', class_=re.compile(r'specifications|product-details'))
-        if spec_section:
-            spec_items = spec_section.find_all('div', class_=re.compile(r'spec-item'))
-            for item in spec_items:
-                key_elem = item.find('span', class_=re.compile(r'spec-key'))
-                value_elem = item.find('span', class_=re.compile(r'spec-value'))
-                if key_elem and value_elem:
-                    specs[key_elem.get_text(strip=True)] = value_elem.get_text(strip=True)
-        
-        return {
-            "product_id": product_id,
-            "title": title,
-            "price": price,
-            "brand": brand,
-            "model_number": model_number,
-            "description": description,
-            "specifications": specs,
-            "availability": {
-                "in_stock": True,  # Mock data
-                "store_pickup": True,
-                "delivery_available": True
-            }
-        }
-        
-    except Exception as e:
-        logger.error(f"[{request_id}] Error extracting product details: {str(e)}")
-        return {
-            "product_id": product_id,
-            "title": "Product details unavailable",
-            "error": str(e)
-        }
