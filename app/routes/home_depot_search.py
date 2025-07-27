@@ -64,7 +64,7 @@ class HomeDepotScraper:
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
                 # Extract products
-                products = await self._extract_products(soup, request_id)
+                products = await self._extract_products(soup, request_id, location)
                 
                 # Build response in SerpAPI format
                 elapsed_time = time.time() - start_time
@@ -85,7 +85,7 @@ class HomeDepotScraper:
             logger.error(f"[{request_id}] Unexpected error during search: {str(e)}")
             raise HTTPException(status_code=500, detail=f"Search failed: {str(e)}")
 
-    async def _extract_products(self, soup: BeautifulSoup, request_id: str) -> List[Dict[str, Any]]:
+    async def _extract_products(self, soup: BeautifulSoup, request_id: str, location: str) -> List[Dict[str, Any]]:
         """Extract product information from search results"""
         products = []
         
@@ -101,7 +101,7 @@ class HomeDepotScraper:
         
         for idx, container in enumerate(product_containers[:1]):  # Limit to 24 products
             try:
-                product = await self._extract_single_product(container, idx + 1)
+                product = await self._extract_single_product(container, idx + 1, location)
                 if product:
                     products.append(product)
             except Exception as e:
@@ -110,7 +110,7 @@ class HomeDepotScraper:
         
         return products
 
-    async def _extract_single_product(self, container: BeautifulSoup, position: int) -> Optional[Dict[str, Any]]:
+    async def _extract_single_product(self, container: BeautifulSoup, position: int, location: str) -> Optional[Dict[str, Any]]:
         """Extract information for a single product"""
         try:
             # Debug: Log the container HTML structure for the first product
@@ -136,6 +136,16 @@ class HomeDepotScraper:
             
             if not product_id:
                 return None
+                
+            # Scrape the product detail page to get more information
+            product_details = {}# await self._scrape_product_detail_page(href, location)
+            # If we got additional details, use them to enhance our data
+            enhanced_brand = product_details.get('brand')
+            enhanced_model = product_details.get('model_number')
+            additional_images = product_details.get('images', [])
+            specifications = product_details.get('specifications', {})
+            description = product_details.get('description', '')
+            details_html = product_details.get('html', '')
             
             # Extract title - updated selectors based on Home Depot structure
             title_selectors = [
@@ -328,26 +338,34 @@ class HomeDepotScraper:
                             print(f"Extracted reviews: {reviews}")
             
         
-            # Build full product URL
-            full_link = href if href.startswith('http') else f"https://www.homedepot.com{href}"
-
             # Build product data
             product = {
                 "position": position,
                 "product_id": product_id,
                 "title": title,
-                "link": full_link,
-                "brand": brand,
-                "model_number": model_number,
+                "link": f"https://www.homedepot.com{href}" if href.startswith('/') else href,
+                "brand": enhanced_brand or brand,  # Use enhanced brand if available
+                "model_number": enhanced_model or model_number,  # Use enhanced model if available
                 "price": price,
                 "rating": rating,
                 "reviews": reviews,
-                "html": str(container)
+                "html": str(container),
+                "details_html": details_html
             }
             
             # Add price range info if available
             if price_range:
                 product["price_range"] = price_range
+                
+            # Add additional details from product page if available
+            if additional_images:
+                product["images"] = additional_images
+                
+            if specifications:
+                product["specifications"] = specifications
+                
+            if description:
+                product["description"] = description
             
             # Add thumbnails if available
             if thumbnails:
@@ -374,6 +392,88 @@ class HomeDepotScraper:
         except Exception as e:
             logger.warning(f"Error extracting single product: {str(e)}")
             return None
+
+    async def _scrape_product_detail_page(self, href: str, zip_code: str) -> Dict[str, Any]:
+        """Scrape the product detail page to get more detailed information"""
+        try:
+            # Build the full URL if it's a relative URL
+            if href.startswith('/'):
+                product_url = f"https://www.homedepot.com{href}"
+            else:
+                product_url = href
+                
+            print(f"Scraping product detail page: {product_url}")
+            
+            # Set cookies for location
+            cookies = {
+                'THD_CACHE_NAV_SESSION': '1',
+                'THD_SESSION': 'zipCode=' + zip_code,
+                'THD_PERSIST': 'C4%3D' + zip_code + '%2BUS',
+                'zipCode': zip_code
+            }
+            
+            async with httpx.AsyncClient(timeout=30.0) as client:
+                response = await client.get(product_url, headers=self.headers, cookies=cookies)
+                
+                if response.status_code != 200:
+                    print(f"Failed to fetch product detail page: {response.status_code}")
+                    return {}
+                    
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                # Extract detailed product information
+                details = {}
+                
+                # Get more accurate brand information
+                brand_elem = soup.select_one('span[data-testid="attribute-brandname-inline"]')
+                if brand_elem:
+                    details['brand'] = brand_elem.get_text(strip=True)
+                
+                # Get more accurate model number
+                model_section = soup.select_one('div:contains("Model#")')
+                if model_section:
+                    model_text = model_section.get_text(strip=True)
+                    if "Model#" in model_text:
+                        details['model_number'] = model_text.split("Model#")[-1].strip()
+                
+                # Get detailed specifications
+                specs = {}
+                spec_rows = soup.select('div[data-testid="specifications"] div.sui-flex.sui-flex-row')
+                for row in spec_rows:
+                    columns = row.select('div')
+                    if len(columns) >= 2:
+                        key = columns[0].get_text(strip=True)
+                        value = columns[1].get_text(strip=True)
+                        if key and value:
+                            specs[key] = value
+                
+                if specs:
+                    details['specifications'] = specs
+                
+                # Get product description
+                desc_elem = soup.select_one('div[data-testid="product-description"]')
+                if desc_elem:
+                    details['description'] = desc_elem.get_text(strip=True)
+                
+                # Get high-quality images
+                images = []
+                img_elems = soup.select('img[data-testid="product-image"]')
+                for img in img_elems:
+                    src = img.get('src')
+                    if src and 'homedepot' in src and not src.endswith('.gif'):
+                        images.append(src)
+                
+                if images:
+                    details['images'] = images
+
+                details['html'] = str(soup)
+                
+                print(f"Extracted product details: {details.keys()}")
+                return details
+                
+        except Exception as e:
+            print(f"Error scraping product detail page: {str(e)}")
+            return {}
 
     def _parse_price(self, price_text: str) -> float:
         """Parse price from text with improved regex"""
