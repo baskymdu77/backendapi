@@ -180,24 +180,9 @@ class HomeDepotScraper:
                 if link_text and len(link_text) > 3:
                     title = link_text
             
-            # Extract price - improved logic for variable pricing
+            # Extract price - improved logic for variable pricing including range-price
             price_selectors = [
-                "#standard-price",
-                'span[data-testid="price"]',
-                'span[data-automation-id="product-price"]',
-                'div[data-testid="price-range"]',  # For price ranges
-                'span.sui-text-xl.sui-font-bold',  # Common price styling
-                'span.sui-text-lg.sui-font-bold',
-                'span.sui-text-2xl.sui-font-bold',  # Larger price text
-                'span.price',
-                'span.price-format',
-                '.price__dollars',
-                '.price-current',
-                '.price-display',
-                'span[aria-label*="dollar"]',
-                '.price-range__start',
-                '.price-from',
-                '.starting-at'
+                "#range-price",  # Specific Home Depot price range selector
             ]
             
             price = 0.0
@@ -209,32 +194,35 @@ class HomeDepotScraper:
                 try:
                     price_elem = container.select_one(selector)
                     if price_elem:
+                        # Special handling for range-price structure
+                        if selector == "#range-price":
+                            # Extract prices from the specific Home Depot range structure
+                            price_spans = price_elem.select('span.sui-text-4xl')
+                            if len(price_spans) >= 2:
+                                # Get the two main price numbers
+                                price1 = price_spans[0].get_text(strip=True)
+                                price2 = price_spans[1].get_text(strip=True)
+                                
+                                # Get the decimal parts if they exist
+                                decimal_spans = price_elem.select('span.sui-text-xs')
+                                decimal1 = decimal2 = "00"
+                                if len(decimal_spans) >= 4:  # $, price1, decimal1, $, price2, decimal2
+                                    decimal1 = decimal_spans[1].get_text(strip=True) if len(decimal_spans) > 1 else "00"
+                                    decimal2 = decimal_spans[3].get_text(strip=True) if len(decimal_spans) > 3 else "00"
+                                
+                                # Construct the price range
+                                price1_full = f"${price1}.{decimal1}"
+                                price2_full = f"${price2}.{decimal2}"
+                                price_range = f"{price1_full} - {price2_full}"
+                                price = self._parse_price(price1_full)  # Use the lower price
+                                
+                                print(f"Range price extracted: {price_range}, using: {price}")
+                                break
+                        
                         price_text = price_elem.get_text(strip=True)
                         print(f"Price text: {price_text}")
-                        # Check for price ranges (e.g., "$10.99 - $25.99" or "Starting at $15.99")
-                        if 'starting' in price_text.lower() or 'from' in price_text.lower():
-                            # Extract the starting price
-                            price_match = re.search(r'\$([\d,]+(?:\.\d{2})?)', price_text)
-                            if price_match:
-                                price = self._parse_price(price_match.group())
-                                price_range = f"Starting at {price_match.group()}"
-                                break
-                        elif '-' in price_text and '$' in price_text:
-                            # Handle price ranges like "$10.99 - $25.99"
-                            prices = re.findall(r'\$([\d,]+(?:\.\d{2})?)', price_text)
-                            if len(prices) >= 2:
-                                price = self._parse_price(f"${prices[0]}")
-                                price_range = price_text
-                                break
-                            elif len(prices) == 1:
-                                price = self._parse_price(f"${prices[0]}")
-                                break
-                        else:
-                            # Regular single price
-                            parsed_price = self._parse_price(price_text)
-                            if parsed_price > 0:
-                                price = parsed_price
-                                break
+                        
+                       
                 except Exception as e:
                     continue
             
@@ -273,6 +261,7 @@ class HomeDepotScraper:
                                 price = parsed_price
                                 break
             print(f"Price: {price}")
+            
             # Extract thumbnail image
             img_selectors = [
                 'img[data-testid="product-image"]',
