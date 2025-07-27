@@ -314,98 +314,19 @@ class HomeDepotScraper:
             for selector in brand_selectors:
                 brand_elem = container.select_one(selector)
                 if brand_elem:
-                    brand_text = brand_elem.get_text(strip=True)
-                    if brand_text and len(brand_text) > 1 and not brand_text.lower() in ['brand', 'manufacturer', 'by']:
-                        brand = brand_text
-                        break
+                    brand = brand_elem.get_text(strip=True)
+                    break
             
         
-            # Extract model number - improved extraction with pattern matching
-            model_selectors = [
-                'div[data-component*="ProductDetailsModelCollection"] span',  # Based on Home Depot structure
-                'div[data-component*="model"] span',
-                'span[data-testid="model"]',
-                'span[data-automation-id="model"]',
-                'span[data-testid="model-number"]',
-                'span[data-testid="sku"]',
-                'span[data-testid="item-number"]',
-                '.model',
-                '.model-number',
-                '.product-model',
-                '.sku',
-                '.product-sku',
-                'span.sui-text-xs.sui-text-subtle',  # Model numbers often in small subtle text
-                'span.sui-text-sm.sui-text-subtle',
-                'div[data-testid="product-info"] span',
-                'div.sui-flex span:contains("Model")',
-                'div.sui-flex span:contains("#")',
-                'div.sui-flex span:contains("SKU")',
-                'div.sui-flex span:contains("Item")'  # Home Depot uses "Item #" format
-            ]
             
             model_number = "N/A"
-            
-            # Try specific model selectors first
-            for selector in model_selectors:
-                if ':contains(' in selector:
-                    # Handle special :contains selector manually
-                    search_term = selector.split(':contains("')[1].split('")')[0]
-                    base_selector = selector.split(':contains(')[0]
-                    model_elems = container.select(base_selector)
-                    for model_elem in model_elems:
-                        if search_term.lower() in model_elem.get_text().lower():
-                            model_text = model_elem.get_text(strip=True)
-                            if model_text and len(model_text) > 1:
-                                # Extract model number from text containing the search term
-                                if search_term == 'Model':
-                                    model_match = re.search(r'Model[\s#:]*([A-Z0-9][A-Z0-9\-_]{2,})', model_text, re.IGNORECASE)
-                                elif search_term == '#':
-                                    model_match = re.search(r'#([A-Z0-9][A-Z0-9\-_]{2,})', model_text)
-                                elif search_term in ['SKU', 'Item']:
-                                    model_match = re.search(rf'{search_term}[\s#:]*([A-Z0-9][A-Z0-9\-_]{{2,}})', model_text, re.IGNORECASE)
-                                else:
-                                    model_match = None
-                                
-                                if model_match:
-                                    model_number = model_match.group(1)
-                                    break
-                    if model_number != "N/A":
-                        break
-                else:
-                    model_elems = container.select(selector)  # Use select to get all matches
-                    for model_elem in model_elems:
-                        model_text = model_elem.get_text(strip=True)
-                        if model_text and len(model_text) > 1:
-                            # Check if this looks like a model number
-                            if re.search(r'[A-Z0-9]{3,}', model_text) or 'model' in model_text.lower():
-                                model_number = model_text
-                                break
-                    if model_number != "N/A":
-                        break
-            
-            # If no model found, search for model patterns in container text
-            if model_number == "N/A":
-                container_text = container.get_text()
-                
-                # Common model number patterns
-                model_patterns = [
-                    r'(?:Model|Item|SKU)\s*[#:]?\s*([A-Z0-9][A-Z0-9\-_]{2,})',  # Model: ABC123
-                    r'#([A-Z0-9][A-Z0-9\-_]{3,})',                              # #ABC123
-                    r'\b([A-Z]{2,}[0-9]{2,}[A-Z0-9\-_]*)\b',                   # ABC123XYZ
-                    r'\b([0-9]{3,}[A-Z]{2,}[A-Z0-9\-_]*)\b',                   # 123ABCXYZ
-                ]
-                
-                for pattern in model_patterns:
-                    model_matches = re.findall(pattern, container_text, re.IGNORECASE)
-                    if model_matches:
-                        # Take the first reasonable model number
-                        for match in model_matches:
-                            if len(match) >= 3 and len(match) <= 20:  # Reasonable length
-                                model_number = match
-                                break
-                        if model_number != "N/A":
-                            break
-            
+
+            for div in container.select('div[data-testid="pod-section"] div.sui-flex'):
+                text = div.get_text(strip=True)
+                if "Model#" in text:
+                    model_number = text.split("Model#")[-1].strip()
+                    break
+          
             # Extract rating and reviews - updated selectors
             rating_selectors = [
                 'span[data-testid="rating"]',
