@@ -118,15 +118,7 @@ class HomeDepotScraper:
                 logger.info(f"First product container HTML snippet: {str(container)[:500]}...")
             # Extract product link and ID - updated selectors
             link_selectors = [
-                'a[data-testid="product-link"]',
-                'a[data-automation-id="product-link"]', 
-                'a[href*="/p/"]',
-                'a[href*="product"]',
-                'a.sui-btn-text',  # Based on Home Depot's button classes
-                'h3 a',
-                'h2 a', 
-                '.product-title a',
-                'a:first-child'
+                'div[data-testid="product-pod"] a'
             ]
             
             product_link = None
@@ -147,39 +139,16 @@ class HomeDepotScraper:
             
             # Extract title - updated selectors based on Home Depot structure
             title_selectors = [
-                'h3[data-testid="product-title"]',
-                'h2[data-testid="product-title"]',
-                'span[data-testid="product-title"]',
-                'a[data-testid="product-title"]',
-                'h3.sui-h6-bold',  # Home Depot uses these heading classes
-                'h2.sui-h5-bold',
-                'h3.sui-text-base',
-                '.product-title',
-                'h3 a',
-                'h2 a',
-                'a[data-testid="product-link"]',
-                '.product-name',
-                'span.sui-line-clamp-2',  # Product titles often use line clamping
-                'a[data-automation-id="product-title"]',
-                '.product-pod__title',
-                '.browse-search__pod__title'
+                'span[data-testid="attribute-product-label"]',
             ]
             
             title = "Product Title Not Found"
             for selector in title_selectors:
                 title_elem = container.select_one(selector)
                 if title_elem:
-                    title_text = title_elem.get_text(strip=True)
-                    if title_text and len(title_text) > 3:  # Ensure it's a meaningful title
-                        title = title_text
-                        break
-            
-            # If still no title, try getting it from the product link
-            if title == "Product Title Not Found" and product_link:
-                link_text = product_link.get_text(strip=True)
-                if link_text and len(link_text) > 3:
-                    title = link_text
-            
+                    title = title_elem.get_text(strip=True)
+                    break
+
             # Extract price - improved logic for variable pricing including range-price
             price_selectors = [
                 "#range-price",  # Specific Home Depot price range selector
