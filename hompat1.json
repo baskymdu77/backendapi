@@ -1,0 +1,3741 @@
+{
+  "search_metadata": {
+    "id": "6885c4524a0898283c7cc63d",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/e114f499911473da/6885c4524a0898283c7cc63d.json",
+    "created_at": "2025-07-27 06:16:50 UTC",
+    "processed_at": "2025-07-27 06:16:51 UTC",
+    "home_depot_url": "https://www.homedepot.com/b/N-5yc1v/Ntt-windows?Nao=0",
+    "raw_html_file": "https://serpapi.com/searches/e114f499911473da/6885c4524a0898283c7cc63d.html",
+    "prettify_html_file": "https://serpapi.com/searches/e114f499911473da/6885c4524a0898283c7cc63d.prettify",
+    "total_time_taken": 1.95
+  },
+  "search_parameters": {
+    "q": "windows",
+    "nao": "0",
+    "ps": 24,
+    "page": "1",
+    "delivery_zip": "04401",
+    "store_id": "2414",
+    "country": "us",
+    "engine": "home_depot"
+  },
+  "search_information": {
+    "results_state": "Results for exact spelling",
+    "total_results": 2864,
+    "store_id": "2414",
+    "store_name": "Bangor"
+  },
+  "products": [
+    {
+      "position": 1,
+      "product_id": "203157300",
+      "title": "50 Series Low-E Argon Glass Single Hung White Vinyl Fin Window with Grids, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/catalog/productImages/65/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_65.jpg",
+          "https://images.thdstatic.com/catalog/productImages/100/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_100.jpg",
+          "https://images.thdstatic.com/catalog/productImages/145/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_145.jpg",
+          "https://images.thdstatic.com/catalog/productImages/300/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_300.jpg",
+          "https://images.thdstatic.com/catalog/productImages/400/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_400.jpg",
+          "https://images.thdstatic.com/catalog/productImages/600/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_600.jpg",
+          "https://images.thdstatic.com/catalog/productImages/1000/f0/f00a737e-20cc-4bb6-887f-29b56c2bf43e_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-31-3-8-in-x-51-1-4-in-50-Series-Single-Hung-White-Vinyl-Insulated-Window-with-Nailing-Flange-and-Colonial-Grilles-50-SH-FIN/203157300",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157300&store_id=2414",
+      "model_number": "50 SH FIN",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/American-Craftsman-35-375-in-x-61-25-in-50-Series-White-Single-Hung-Low-E-Argon-Glass-Vinyl-Fin-Window-with-Grids-Screen-Incl-50-SH-FIN/203157308",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/08/082f3823-3544-4403-a55e-e34de49ed7bf_35.jpg"
+        }
+      ],
+      "favorite": 143,
+      "rating": 4.1953,
+      "reviews": 297,
+      "price": 279,
+      "price_from": 189,
+      "price_to": 299,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 2,
+      "product_id": "203157290",
+      "title": "35.375 in. x 59.25 in. 50 Series White Single Hung Low-E Argon Glass Vinyl Fin Window, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_65.jpg",
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_100.jpg",
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_145.jpg",
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_300.jpg",
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_400.jpg",
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_600.jpg",
+          "https://images.thdstatic.com/productImages/3265f8cd-d5b8-43cf-9efb-aba6b61af8cb/svn/american-craftsman-single-hung-windows-50-sh-fin-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-35-375-in-x-59-25-in-50-Series-White-Single-Hung-Low-E-Argon-Glass-Vinyl-Fin-Window-Screen-Incl-50-SH-FIN/203157290",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157290&store_id=2414",
+      "model_number": "50 SH FIN",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/American-Craftsman-23-375-in-x-35-25-in-50-Series-White-Single-Hung-Low-E-Argon-SC-Obscure-Glass-Vinyl-Fin-Window-Screen-Incl-2030523LSO/204780997",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/21/212a2bcb-47ed-4c15-9049-b0470f61225b_35.jpg"
+        }
+      ],
+      "favorite": 54,
+      "rating": 4.0851,
+      "reviews": 47,
+      "price": 249,
+      "delivery": {
+        "schedule_delivery": true
+      },
+      "pickup": {
+        "quantity": 0,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 3,
+      "product_id": "203157345",
+      "title": "33.75 in. x 56.75 in. 70 Series White Double Hung Low-E Argon Glass Vinyl Fin with J Window with Grids, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_65.jpg",
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_100.jpg",
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_145.jpg",
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_300.jpg",
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_400.jpg",
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_600.jpg",
+          "https://images.thdstatic.com/productImages/a9eafb70-849c-42f8-98a8-fee74dd3edff/svn/american-craftsman-double-hung-windows-70-dh-fin-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/1c282dc9-6289-4bb9-be4f-e83a2235d79d/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-33-75-in-x-56-75-in-70-Series-White-Double-Hung-Low-E-Argon-Glass-Vinyl-Fin-with-J-Window-with-Grids-Screen-Incl-70-DH-FIN/203157345",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157345&store_id=2414",
+      "model_number": "70 DH FIN",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "favorite": 475,
+      "rating": 4.3429,
+      "reviews": 312,
+      "price": 279,
+      "price_from": 279,
+      "price_to": 359,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "quantity": 21,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 4,
+      "product_id": "203157331",
+      "title": "37.75 in. x 56.75 in. 70 Series White Double Hung Low-E Argon Glass Vinyl Fin with J Window, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_65.jpg",
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_100.jpg",
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_145.jpg",
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_300.jpg",
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_400.jpg",
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_600.jpg",
+          "https://images.thdstatic.com/productImages/6edffba6-b331-4222-9ebe-95eb6a465d96/svn/american-craftsman-double-hung-windows-70-dh-fin-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/7db4f148-77f5-49b9-8339-9e2aa75d3037/svn/american-craftsman-double-hung-windows-70-dh-fin-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-37-75-in-x-56-75-in-70-Series-White-Double-Hung-Low-E-Argon-Glass-Vinyl-Fin-with-J-Window-Screen-Incl-70-DH-FIN/203157331",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157331&store_id=2414",
+      "model_number": "70 DH FIN",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "favorite": 379,
+      "rating": 4.1699,
+      "reviews": 565,
+      "price": 269,
+      "badges": [
+        "bestseller"
+      ],
+      "price_from": 239,
+      "price_to": 349,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "quantity": 25,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 5,
+      "product_id": "204814587",
+      "title": "27.75 in. x 53.25 in. 70 Pro Series White Double Hung Low-E Argon Glass Vinyl Replacement Window, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_65.jpg",
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_100.jpg",
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_145.jpg",
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_300.jpg",
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_400.jpg",
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_600.jpg",
+          "https://images.thdstatic.com/productImages/a85b94cc-838b-4ba7-9365-d27e930f438e/svn/american-craftsman-double-hung-windows-2854786-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/b3c01941-7e8b-4025-a8c5-bca3a2b5e692/svn/american-craftsman-double-hung-windows-2854786-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-27-75-in-x-53-25-in-70-Pro-Series-White-Double-Hung-Low-E-Argon-Glass-Vinyl-Replacement-Window-Screen-Incl-2854786/204814587",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=204814587&store_id=2414",
+      "model_number": "2854786",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "favorite": 516,
+      "rating": 4.2079,
+      "reviews": 1910,
+      "price": 339,
+      "price_from": 219,
+      "price_to": 402.68,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 6,
+      "product_id": "203157276",
+      "title": "23.375 in. x 35.25 in. 50 Series White Single Hung Low-E Argon Glass Vinyl Fin Window, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_65.jpg",
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_100.jpg",
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_145.jpg",
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_300.jpg",
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_400.jpg",
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_600.jpg",
+          "https://images.thdstatic.com/productImages/4c43300c-81c3-43ce-ac2d-c37e06cf4e17/svn/american-craftsman-single-hung-windows-50-sh-fin-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/241e1a7a-f37f-4740-a11b-8c9f52e29ee4/svn/american-craftsman-single-hung-windows-50-sh-fin-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-23-375-in-x-35-25-in-50-Series-White-Single-Hung-Low-E-Argon-Glass-Vinyl-Fin-Window-Screen-Incl-50-SH-FIN/203157276",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157276&store_id=2414",
+      "model_number": "50 SH FIN",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "favorite": 1070,
+      "rating": 4.2176,
+      "reviews": 501,
+      "price": 154,
+      "price_from": 199,
+      "price_to": 249,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "quantity": 17,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 7,
+      "product_id": "203157486",
+      "title": "30.75 in. x 14.25 in. 70 Series White Sliding Low-E Argon Glass Vinyl Replacement Window, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_65.jpg",
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_100.jpg",
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_145.jpg",
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_300.jpg",
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_400.jpg",
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_600.jpg",
+          "https://images.thdstatic.com/productImages/922f9fda-ca83-434a-a505-9924e56c7579/svn/american-craftsman-sliding-windows-70-slider-buck-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-30-75-in-x-14-25-in-70-Series-White-Sliding-Low-E-Argon-Glass-Vinyl-Replacement-Window-Screen-Incl-70-SLIDER-BUCK/203157486",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157486&store_id=2414",
+      "model_number": "70 SLIDER BUCK",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "favorite": 530,
+      "rating": 4.3152,
+      "reviews": 460,
+      "price": 154,
+      "price_from": 154,
+      "price_to": 209,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "quantity": 1,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 8,
+      "product_id": "203157488",
+      "title": "30.75 in. x 18.25 in. 70 Series Low-E Argon Glass Sliding White Vinyl Replacement Window, Screen Incl",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_65.jpg",
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_100.jpg",
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_145.jpg",
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_300.jpg",
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_400.jpg",
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_600.jpg",
+          "https://images.thdstatic.com/productImages/65a2596f-86cc-4567-9b82-54be9712198b/svn/american-craftsman-sliding-windows-70-slider-buck-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/f09dc078-1b62-4d43-9c5a-420c4525c37f/svn/american-craftsman-sliding-windows-70-slider-buck-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-30-75-in-x-18-25-in-70-Series-Low-E-Argon-Glass-Sliding-White-Vinyl-Replacement-Window-Screen-Incl-70-SLIDER-BUCK/203157488",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157488&store_id=2414",
+      "model_number": "70 SLIDER BUCK",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "favorite": 948,
+      "rating": 4.3152,
+      "reviews": 460,
+      "price": 179,
+      "price_from": 154,
+      "price_to": 209,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "quantity": 3,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 9,
+      "product_id": "100671877",
+      "title": "Basement Single Sliding Vinyl Window – Insulated Glass",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/catalog/productImages/65/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_65.jpg",
+          "https://images.thdstatic.com/catalog/productImages/100/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_100.jpg",
+          "https://images.thdstatic.com/catalog/productImages/145/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_145.jpg",
+          "https://images.thdstatic.com/catalog/productImages/300/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_300.jpg",
+          "https://images.thdstatic.com/catalog/productImages/400/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_400.jpg",
+          "https://images.thdstatic.com/catalog/productImages/600/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_600.jpg",
+          "https://images.thdstatic.com/catalog/productImages/1000/e8/e83cb334-d000-4036-ab2e-786fcd1da8c4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-32-25-in-x-14-25-in-White-Left-Hand-Double-Pane-Insulated-Glass-Vinyl-Sliding-Basement-Window-with-Screen-VBSI3214B/100671877",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=100671877&store_id=2414",
+      "model_number": "VBSI3214B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-32-25-in-x-14-25-in-White-Left-Hand-Double-Pane-Insulated-Glass-Vinyl-Sliding-Basement-Window-with-Screen-VBSI3214B/100671877",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/19/19346844-09a6-4082-830d-84f83fe9d9b0_35.jpg"
+        }
+      ],
+      "favorite": 1138,
+      "rating": 4.3909,
+      "reviews": 1489,
+      "price": 89.68,
+      "badges": [
+        "top rated"
+      ],
+      "price_from": 89.68,
+      "price_to": 143.5,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 10,
+      "product_id": "203157754",
+      "title": "48 in. x 47 in. 50 Series Sliding White Vinyl Window with Nailing Fin",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_65.jpg",
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_100.jpg",
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_145.jpg",
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_300.jpg",
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_400.jpg",
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_600.jpg",
+          "https://images.thdstatic.com/productImages/3405665e-6c12-458e-9cee-6d4e2988ad30/svn/american-craftsman-sliding-windows-50-slider-fin-64_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/American-Craftsman-48-in-x-47-in-50-Series-Sliding-White-Vinyl-Window-with-Nailing-Fin-50-SLIDER-FIN/203157754",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203157754&store_id=2414",
+      "model_number": "50 SLIDER FIN",
+      "brand": "American Craftsman",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/American-Craftsman-48-in-x-47-in-50-Series-Sliding-White-Vinyl-Window-with-Nailing-Fin-50-SLIDER-FIN/203157754",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/21/212a2bcb-47ed-4c15-9049-b0470f61225b_35.jpg"
+        }
+      ],
+      "favorite": 266,
+      "rating": 4.1787,
+      "reviews": 347,
+      "price": 259,
+      "delivery": {
+        "schedule_delivery": true
+      },
+      "pickup": {
+        "quantity": 6,
+        "store_name": "Bangor",
+        "distance": 0
+      }
+    },
+    {
+      "position": 11,
+      "product_id": "202207815",
+      "title": "24 in. x 36 in. White Double-Pane Insulated Glass Vinyl Single Hung Window with Screen",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_65.jpg",
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_100.jpg",
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_145.jpg",
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_300.jpg",
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_400.jpg",
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_600.jpg",
+          "https://images.thdstatic.com/productImages/16d7a8ce-adf5-4eb4-90a3-c7dceba4b47e/svn/tafco-windows-single-hung-windows-vshi2436b-64_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-24-in-x-36-in-White-Double-Pane-Insulated-Glass-Vinyl-Single-Hung-Window-with-Screen-VSHI2436B/202207815",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=202207815&store_id=2414",
+      "model_number": "VSHI2436B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "favorite": 901,
+      "rating": 4.5031,
+      "reviews": 163,
+      "price": 147.23,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 12,
+      "product_id": "205688238",
+      "title": "47.5 in. x 59.5 in. V-2500 Series White Vinyl Single Hung Window with Colonial Grids/Grilles",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_65.jpg",
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_100.jpg",
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_145.jpg",
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_300.jpg",
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_400.jpg",
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_600.jpg",
+          "https://images.thdstatic.com/productImages/6c74b259-8761-453c-907b-8de53915e296/svn/jeld-wen-single-hung-windows-thdjw143800713-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/3b2984c9-eaee-4c6f-81ca-43c8c5ee2d2f/svn/jeld-wen-single-hung-windows-thdjw143800713-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/JELD-WEN-47-5-in-x-59-5-in-V-2500-Series-White-Vinyl-Single-Hung-Window-with-Colonial-Grids-Grilles-THDJW143800713/205688238",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=205688238&store_id=2414",
+      "model_number": "THDJW143800713",
+      "brand": "JELD-WEN",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/JELD-WEN-47-5-in-x-59-5-in-V-2500-Series-White-Vinyl-Single-Hung-Window-with-Colonial-Grids-Grilles-THDJW143800713/205688238",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/2a/2a7f886b-3ffe-40e2-a302-9f0a6169f59f_35.jpg"
+        }
+      ],
+      "favorite": 343,
+      "rating": 4.1719,
+      "reviews": 64,
+      "price": 688,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 13,
+      "product_id": "203951017",
+      "title": "24 in. x 30 in. White Single-Pane Vinyl Single Hung Utility/Shed Window with Screen",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_65.jpg",
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_100.jpg",
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_145.jpg",
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_300.jpg",
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_400.jpg",
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_600.jpg",
+          "https://images.thdstatic.com/productImages/f1ad8e4c-e2f9-4436-b308-f657a24bb027/svn/tafco-windows-single-hung-windows-vsh2430b-64_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-24-in-x-30-in-White-Single-Pane-Vinyl-Single-Hung-Utility-Shed-Window-with-Screen-VSH2430B/203951017",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203951017&store_id=2414",
+      "model_number": "VSH2430B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "favorite": 778,
+      "rating": 4.3655,
+      "reviews": 591,
+      "price": 108,
+      "price_from": 100.94,
+      "price_to": 118,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 14,
+      "product_id": "205817906",
+      "title": "59.5 in. x 59.5 in. V-2500 Series White Vinyl Right-Handed Sliding Window with Fiberglass Mesh Screen",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_65.jpg",
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_100.jpg",
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_145.jpg",
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_300.jpg",
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_400.jpg",
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_600.jpg",
+          "https://images.thdstatic.com/productImages/ba402904-16b1-4ed5-a929-55d04d760603/svn/jeld-wen-sliding-windows-thdjw138500124-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/87479ed1-d6c9-4899-83aa-3558ac61ec63/svn/jeld-wen-sliding-windows-thdjw138500124-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/JELD-WEN-59-5-in-x-59-5-in-V-2500-Series-White-Vinyl-Right-Handed-Sliding-Window-with-Fiberglass-Mesh-Screen-THDJW138500124/205817906",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=205817906&store_id=2414",
+      "model_number": "THDJW138500124",
+      "brand": "JELD-WEN",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/JELD-WEN-59-5-in-x-59-5-in-V-2500-Series-White-Vinyl-Right-Handed-Sliding-Window-with-Fiberglass-Mesh-Screen-THDJW138500124/205817906",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/c8/c87b7a2a-17de-48dd-a809-638fbc98a4ba_35.jpg"
+        }
+      ],
+      "favorite": 318,
+      "rating": 3.9577,
+      "reviews": 189,
+      "price": 758,
+      "price_from": 216.58,
+      "price_to": 788,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 15,
+      "product_id": "206523735",
+      "title": "36 in. x 60 in. White Double-Pane Insulated Glass Vinyl Single Hung Window with Grids and Screen",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_65.jpg",
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_100.jpg",
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_145.jpg",
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_300.jpg",
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_400.jpg",
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_600.jpg",
+          "https://images.thdstatic.com/productImages/69a82f2f-1f61-4527-9643-cc75219050e4/svn/tafco-windows-single-hung-windows-vshi3660gb-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/f4e6563f-cb7c-4632-870e-dad4d1c6efa0/svn/tafco-windows-single-hung-windows-vshi3660gb-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-36-in-x-60-in-White-Double-Pane-Insulated-Glass-Vinyl-Single-Hung-Window-with-Grids-and-Screen-VSHI3660GB/206523735",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=206523735&store_id=2414",
+      "model_number": "VSHI3660GB",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-24-in-x-36-in-White-Double-Pane-Insulated-Glass-Vinyl-Single-Hung-Window-with-Grids-and-Screen-VSHI2436GB/303993131",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/e7/e7a8e1dc-0e01-4575-b778-fe689fcedf56_35.jpg"
+        }
+      ],
+      "favorite": 135,
+      "rating": 3.944,
+      "reviews": 232,
+      "price": 239.23,
+      "unit": "box",
+      "price_from": 149.54,
+      "price_to": 255.2
+    },
+    {
+      "position": 16,
+      "product_id": "100660075",
+      "title": "Utility Sliding Vinyl Window – Insulated Glass",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/catalog/productImages/65/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_65.jpg",
+          "https://images.thdstatic.com/catalog/productImages/100/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_100.jpg",
+          "https://images.thdstatic.com/catalog/productImages/145/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_145.jpg",
+          "https://images.thdstatic.com/catalog/productImages/300/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_300.jpg",
+          "https://images.thdstatic.com/catalog/productImages/400/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_400.jpg",
+          "https://images.thdstatic.com/catalog/productImages/600/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_600.jpg",
+          "https://images.thdstatic.com/catalog/productImages/1000/3c/3cbf87d8-2380-49ca-a40d-bc3d8faf8876_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-36-in-x-24-in-White-Left-Hand-Double-Pane-Insulated-Glass-Vinyl-Sliding-Window-with-Screen-VUSI3624B/100660075",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=100660075&store_id=2414",
+      "model_number": "VUSI3624B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-36-in-x-24-in-White-Left-Hand-Double-Pane-Insulated-Glass-Vinyl-Sliding-Window-with-Screen-VUSI3624B/100660075",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/19/19346844-09a6-4082-830d-84f83fe9d9b0_35.jpg"
+        }
+      ],
+      "favorite": 580,
+      "rating": 4.2217,
+      "reviews": 839,
+      "price": 116.42,
+      "badges": [
+        "bestseller"
+      ],
+      "price_from": 100.94,
+      "price_to": 228,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 17,
+      "product_id": "205797863",
+      "title": "47.5 in. x 47.5 in. V-2500 Series White Vinyl Picture Window w/ Low-E 366 Glass",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_65.jpg",
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_100.jpg",
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_145.jpg",
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_300.jpg",
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_400.jpg",
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_600.jpg",
+          "https://images.thdstatic.com/productImages/3b374b09-d078-43d2-a9ef-21572d9f7bb9/svn/jeld-wen-picture-windows-thdjw141600043-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/9446885d-b550-4567-b59e-ff12916f7bb2/svn/jeld-wen-picture-windows-thdjw141600043-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/JELD-WEN-47-5-in-x-47-5-in-V-2500-Series-White-Vinyl-Picture-Window-w-Low-E-366-Glass-THDJW141600043/205797863",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=205797863&store_id=2414",
+      "model_number": "THDJW141600043",
+      "brand": "JELD-WEN",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/JELD-WEN-47-5-in-x-47-5-in-V-2500-Series-White-Vinyl-Picture-Window-w-Low-E-366-Glass-THDJW141600043/205797863",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/c1/c1b20d39-bf70-4844-887c-eee0465bd6bb_35.jpg"
+        },
+        {
+          "title": "Bronze",
+          "link": "https://www.homedepot.com/p/JELD-WEN-48-in-x-48-in-V-2500-Series-Bronze-Exterior-White-Interior-FiniShield-Vinyl-Picture-Window-w-Low-E-366-Glass-THDJW141600087/205797874",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/3e/3e68dc9a-5244-4910-8776-b8ef7b3731d7_35.jpg"
+        }
+      ],
+      "favorite": 444,
+      "rating": 4.3883,
+      "reviews": 103,
+      "price": 468,
+      "price_from": 168,
+      "price_to": 868,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 18,
+      "product_id": "203819920",
+      "title": "Casement Vinyl Fixed Picture Window, Non-Operating - White",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/catalog/productImages/65/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_65.jpg",
+          "https://images.thdstatic.com/catalog/productImages/100/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_100.jpg",
+          "https://images.thdstatic.com/catalog/productImages/145/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_145.jpg",
+          "https://images.thdstatic.com/catalog/productImages/300/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_300.jpg",
+          "https://images.thdstatic.com/catalog/productImages/400/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_400.jpg",
+          "https://images.thdstatic.com/catalog/productImages/600/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_600.jpg",
+          "https://images.thdstatic.com/catalog/productImages/1000/3e/3e602711-bc60-41f5-8b2c-5ca1aad1fcb5_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-60-in-x-48-in-White-Double-Pane-Insulated-Glass-Vinyl-Casement-Picture-Window-VCAP6048/203819920",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203819920&store_id=2414",
+      "model_number": "VCAP6048",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-60-in-x-48-in-White-Double-Pane-Insulated-Glass-Vinyl-Casement-Picture-Window-VCAP6048/203819920",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/cb/cba4b6c1-d4dd-4349-83fb-6234f0bf9d6d_35.jpg"
+        }
+      ],
+      "favorite": 139,
+      "rating": 4.7143,
+      "reviews": 224,
+      "price": 598,
+      "price_from": 378,
+      "price_to": 678,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 19,
+      "product_id": "202207818",
+      "title": "Vinyl Hopper Basement Window with Dual Pane Insulated Glass - White",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/catalog/productImages/65/29/295b941f-89f9-4c50-89d5-e36137877582_65.jpg",
+          "https://images.thdstatic.com/catalog/productImages/100/29/295b941f-89f9-4c50-89d5-e36137877582_100.jpg",
+          "https://images.thdstatic.com/catalog/productImages/145/29/295b941f-89f9-4c50-89d5-e36137877582_145.jpg",
+          "https://images.thdstatic.com/catalog/productImages/300/29/295b941f-89f9-4c50-89d5-e36137877582_300.jpg",
+          "https://images.thdstatic.com/catalog/productImages/400/29/295b941f-89f9-4c50-89d5-e36137877582_400.jpg",
+          "https://images.thdstatic.com/catalog/productImages/600/29/295b941f-89f9-4c50-89d5-e36137877582_600.jpg",
+          "https://images.thdstatic.com/catalog/productImages/1000/29/295b941f-89f9-4c50-89d5-e36137877582_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-32-25-in-x-16-25-in-White-Double-Pane-Insulated-Glass-Hinged-Vinyl-Hopper-Inswing-Basement-Window-with-Screen-VBHI3216B/202207818",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=202207818&store_id=2414",
+      "model_number": "VBHI3216B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "favorite": 664,
+      "rating": 4.601,
+      "reviews": 1178,
+      "price": 107.8,
+      "badges": [
+        "top rated"
+      ],
+      "price_from": 90.58,
+      "price_to": 108,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 20,
+      "product_id": "202104410",
+      "title": "24 in. x 24 in. White Double-Pane Insulated Glass Octagon Vinyl Geometric Picture Window with Grids",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_65.jpg",
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_100.jpg",
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_145.jpg",
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_300.jpg",
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_400.jpg",
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_600.jpg",
+          "https://images.thdstatic.com/productImages/4e861037-2850-44f4-bdfc-ab71e38ead0c/svn/tafco-windows-shaped-windows-voct2222gb-64_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-24-in-x-24-in-White-Double-Pane-Insulated-Glass-Octagon-Vinyl-Geometric-Picture-Window-with-Grids-VOCT2222GB/202104410",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=202104410&store_id=2414",
+      "model_number": "VOCT2222GB",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-24-in-x-24-in-White-Double-Pane-Insulated-Glass-Octagon-Vinyl-Geometric-Picture-Window-with-Grids-VOCT2222GB/202104410",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/cb/cba4b6c1-d4dd-4349-83fb-6234f0bf9d6d_35.jpg"
+        }
+      ],
+      "favorite": 431,
+      "rating": 4.576,
+      "reviews": 217,
+      "price": 138,
+      "badges": [
+        "bestseller",
+        "top rated"
+      ],
+      "price_from": 138,
+      "price_to": 246.77,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 21,
+      "product_id": "205688222",
+      "title": "23.5 in. x 47.5 in. V-2500 Series White Vinyl Single Hung Window with Colonial Grids/Grilles",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_65.jpg",
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_100.jpg",
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_145.jpg",
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_300.jpg",
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_400.jpg",
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_600.jpg",
+          "https://images.thdstatic.com/productImages/dabf0e3c-5fa9-475c-9323-8406eb2fbcf9/svn/jeld-wen-single-hung-windows-thdjw143800649-64_1000.jpg"
+        ],
+        [
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_65.jpg",
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_100.jpg",
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_145.jpg",
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_300.jpg",
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_400.jpg",
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_600.jpg",
+          "https://images.thdstatic.com/productImages/4c3fc37b-9823-4ecb-9e20-5ca4b34e0b9c/svn/jeld-wen-single-hung-windows-thdjw143800649-e4_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/JELD-WEN-23-5-in-x-47-5-in-V-2500-Series-White-Vinyl-Single-Hung-Window-with-Colonial-Grids-Grilles-THDJW143800649/205688222",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=205688222&store_id=2414",
+      "model_number": "THDJW143800649",
+      "brand": "JELD-WEN",
+      "collection": "https://www.homedepot.com",
+      "variants": [
+        {
+          "title": "White",
+          "link": "https://www.homedepot.com/p/JELD-WEN-23-5-in-x-47-5-in-V-2500-Series-White-Vinyl-Single-Hung-Window-with-Colonial-Grids-Grilles-THDJW143800649/205688222",
+          "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/2a/2a7f886b-3ffe-40e2-a302-9f0a6169f59f_35.jpg"
+        }
+      ],
+      "favorite": 287,
+      "rating": 4.1515,
+      "reviews": 33,
+      "price": 318.97,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 22,
+      "product_id": "100671876",
+      "title": "Vinyl Hopper Basement Window with Dual Pane Insulated Glass - White",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/catalog/productImages/65/29/295b941f-89f9-4c50-89d5-e36137877582_65.jpg",
+          "https://images.thdstatic.com/catalog/productImages/100/29/295b941f-89f9-4c50-89d5-e36137877582_100.jpg",
+          "https://images.thdstatic.com/catalog/productImages/145/29/295b941f-89f9-4c50-89d5-e36137877582_145.jpg",
+          "https://images.thdstatic.com/catalog/productImages/300/29/295b941f-89f9-4c50-89d5-e36137877582_300.jpg",
+          "https://images.thdstatic.com/catalog/productImages/400/29/295b941f-89f9-4c50-89d5-e36137877582_400.jpg",
+          "https://images.thdstatic.com/catalog/productImages/600/29/295b941f-89f9-4c50-89d5-e36137877582_600.jpg",
+          "https://images.thdstatic.com/catalog/productImages/1000/29/295b941f-89f9-4c50-89d5-e36137877582_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-32-25-in-x-18-25-in-White-Double-Pane-Insulated-Glass-Hinged-Vinyl-Hopper-Inswing-Basement-Window-with-Screen-VBHI3218B/100671876",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=100671876&store_id=2414",
+      "model_number": "VBHI3218B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "favorite": 399,
+      "rating": 4.601,
+      "reviews": 1178,
+      "price": 93.88,
+      "badges": [
+        "top rated"
+      ],
+      "price_from": 90.58,
+      "price_to": 108,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    },
+    {
+      "position": 23,
+      "product_id": "203259547",
+      "title": "46.25 in. x 21 in. White Single-Pane Hinged Vinyl Basement/Shed Hopper Reversible Window with screen",
+      "thumbnails": [
+        [
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_65.jpg",
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_100.jpg",
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_145.jpg",
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_300.jpg",
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_400.jpg",
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_600.jpg",
+          "https://images.thdstatic.com/productImages/b2a2f397-1773-41b2-9511-9d8d67d07e38/svn/tafco-windows-hopper-windows-vrw4620b-64_1000.jpg"
+        ]
+      ],
+      "link": "https://www.homedepot.com/p/TAFCO-WINDOWS-46-25-in-x-21-in-White-Single-Pane-Hinged-Vinyl-Basement-Shed-Hopper-Reversible-Window-with-screen-VRW4620B/203259547",
+      "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=203259547&store_id=2414",
+      "model_number": "VRW4620B",
+      "brand": "TAFCO WINDOWS",
+      "collection": "https://www.homedepot.com",
+      "favorite": 184,
+      "rating": 4.3295,
+      "reviews": 88,
+      "price": 128,
+      "delivery": {
+        "free": true,
+        "free_delivery_threshold": false
+      },
+      "pickup": {
+        "free_ship_to_store": true
+      }
+    }
+  ],
+  "filters": [
+    {
+      "key": "Review Rating",
+      "value": [
+        {
+          "name": "5",
+          "count": "1165",
+          "value": "bwo5q",
+          "link": "https://www.homedepot.com/b/Best-Rated/N-5yc1vZbwo5q/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "4 & Up",
+          "count": "5780",
+          "value": "bwo5o",
+          "link": "https://www.homedepot.com/b/Highly-Rated/N-5yc1vZbwo5o/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "3 & Up",
+          "count": "6635",
+          "value": "bwo5n",
+          "link": "https://www.homedepot.com/b/N-5yc1vZbwo5n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "2 & Up",
+          "count": "6798",
+          "value": "bwo5m",
+          "link": "https://www.homedepot.com/b/N-5yc1vZbwo5m/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "1 & Up",
+          "count": "6910",
+          "value": "bwo5l",
+          "link": "https://www.homedepot.com/b/N-5yc1vZbwo5l/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "0",
+          "count": "789",
+          "value": "bwo5r",
+          "link": "https://www.homedepot.com/b/N-5yc1vZbwo5r/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Bundle/Single",
+      "value": [
+        {
+          "name": "Single Product",
+          "count": "8891",
+          "value": "bwo65",
+          "link": "https://www.homedepot.com/b/Single-Product/N-5yc1vZbwo65/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bundle",
+          "count": "4",
+          "value": "bwo64",
+          "link": "https://www.homedepot.com/b/Bundle/N-5yc1vZbwo64/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Category",
+      "value": [
+        {
+          "name": "Doors & Windows",
+          "count": "7440",
+          "value": "aqih",
+          "link": "https://www.homedepot.com/b/Doors-Windows/N-5yc1vZaqih/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Hardware",
+          "count": "1344",
+          "value": "c21m",
+          "link": "https://www.homedepot.com/b/Hardware/N-5yc1vZc21m/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Heating, Venting & Cooling",
+          "count": "163",
+          "value": "c4k8",
+          "link": "https://www.homedepot.com/b/Heating-Venting-Cooling/N-5yc1vZc4k8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Garage",
+          "count": "52",
+          "value": "2fkpg2o",
+          "link": "https://www.homedepot.com/b/Garage/N-5yc1vZ2fkpg2o/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Window Treatments",
+          "count": "26",
+          "value": "ar4w",
+          "link": "https://www.homedepot.com/b/Window-Treatments/N-5yc1vZar4w/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Home Decor",
+          "count": "18",
+          "value": "as6p",
+          "link": "https://www.homedepot.com/b/Home-Decor/N-5yc1vZas6p/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Paint",
+          "count": "14",
+          "value": "ar2d",
+          "link": "https://www.homedepot.com/b/Paint/N-5yc1vZar2d/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "New Arrival",
+      "value": [
+        {
+          "name": "Recently Added",
+          "count": "467",
+          "value": "1z179pc",
+          "link": "https://www.homedepot.com/b/Recently-Added/N-5yc1vZ1z179pc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Get It Fast",
+      "value": [
+        {
+          "name": "Pick Up Today",
+          "count": "136",
+          "value": "1z175a5",
+          "link": "https://www.homedepot.com/b/Pick-Up-Today/N-5yc1vZ1z175a5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Same-Day Delivery",
+          "count": "1024",
+          "value": "1z175cq",
+          "link": "https://www.homedepot.com/b/Same-Day-Delivery/N-5yc1vZ1z175cq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Brand",
+      "value": [
+        {
+          "name": "American Craftsman",
+          "count": "163",
+          "value": "aso",
+          "link": "https://www.homedepot.com/b/American-Craftsman/N-5yc1vZaso/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "TAFCO WINDOWS",
+          "count": "121",
+          "value": "53q",
+          "link": "https://www.homedepot.com/b/TAFCO-WINDOWS/N-5yc1vZ53q/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Ply Gem",
+          "count": "72",
+          "value": "d4s",
+          "link": "https://www.homedepot.com/b/Ply-Gem/N-5yc1vZd4s/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "JELD-WEN",
+          "count": "978",
+          "value": "2he",
+          "link": "https://www.homedepot.com/b/JELD-WEN/N-5yc1vZ2he/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Hy-Lite",
+          "count": "197",
+          "value": "5tl",
+          "link": "https://www.homedepot.com/b/Hy-Lite/N-5yc1vZ5tl/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Clearly Secure",
+          "count": "2860",
+          "value": "f6o",
+          "link": "https://www.homedepot.com/b/Clearly-Secure/N-5yc1vZf6o/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "FrontLine",
+          "count": "912",
+          "value": "fvf",
+          "link": "https://www.homedepot.com/b/FrontLine/N-5yc1vZfvf/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Prime-Line",
+          "count": "733",
+          "value": "5u1",
+          "link": "https://www.homedepot.com/b/Prime-Line/N-5yc1vZ5u1/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Andersen",
+          "count": "312",
+          "value": "5o",
+          "link": "https://www.homedepot.com/b/Andersen/N-5yc1vZ5o/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "RITESCREEN",
+          "count": "269",
+          "value": "r95",
+          "link": "https://www.homedepot.com/b/RITESCREEN/N-5yc1vZr95/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "VELUX",
+          "count": "260",
+          "value": "1ka",
+          "link": "https://www.homedepot.com/b/VELUX/N-5yc1vZ1ka/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Avora Doors and Windows",
+          "count": "198",
+          "value": "100k",
+          "link": "https://www.homedepot.com/b/Avora-Doors-and-Windows/N-5yc1vZ100k/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Phifer",
+          "count": "168",
+          "value": "15a",
+          "link": "https://www.homedepot.com/b/Phifer/N-5yc1vZ15a/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "SHAPE PRODUCTS",
+          "count": "152",
+          "value": "u3x",
+          "link": "https://www.homedepot.com/b/SHAPE-PRODUCTS/N-5yc1vZu3x/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Saint-Gobain ADFORS",
+          "count": "103",
+          "value": "fey",
+          "link": "https://www.homedepot.com/b/Saint-Gobain-ADFORS/N-5yc1vZfey/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Barton Kramer",
+          "count": "96",
+          "value": "79x",
+          "link": "https://www.homedepot.com/b/Barton-Kramer/N-5yc1vZ79x/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Fakro",
+          "count": "91",
+          "value": "4ir",
+          "link": "https://www.homedepot.com/b/Fakro/N-5yc1vZ4ir/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Biggies",
+          "count": "89",
+          "value": "f2n",
+          "link": "https://www.homedepot.com/b/Biggies/N-5yc1vZf2n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "CrystaLok",
+          "count": "84",
+          "value": "b2y",
+          "link": "https://www.homedepot.com/b/CrystaLok/N-5yc1vZb2y/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Mr. Goodbar",
+          "count": "70",
+          "value": "gop",
+          "link": "https://www.homedepot.com/b/Mr-Goodbar/N-5yc1vZgop/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "TEZA DOORS",
+          "count": "65",
+          "value": "tu3",
+          "link": "https://www.homedepot.com/b/TEZA-DOORS/N-5yc1vZtu3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "SUN-TEK",
+          "count": "57",
+          "value": "rxj",
+          "link": "https://www.homedepot.com/b/SUN-TEK/N-5yc1vZrxj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Seves",
+          "count": "56",
+          "value": "g8q",
+          "link": "https://www.homedepot.com/b/Seves/N-5yc1vZg8q/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Unique Home Designs",
+          "count": "49",
+          "value": "8xq",
+          "link": "https://www.homedepot.com/b/Unique-Home-Designs/N-5yc1vZ8xq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Grisham",
+          "count": "44",
+          "value": "3no",
+          "link": "https://www.homedepot.com/b/Grisham/N-5yc1vZ3no/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "SIMONTON",
+          "count": "31",
+          "value": "d9p",
+          "link": "https://www.homedepot.com/b/SIMONTON/N-5yc1vZd9p/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "idh by St. Simons",
+          "count": "29",
+          "value": "mnm",
+          "link": "https://www.homedepot.com/b/idh-by-St-Simons/N-5yc1vZmnm/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "MacCourt",
+          "count": "28",
+          "value": "816",
+          "link": "https://www.homedepot.com/b/MacCourt/N-5yc1vZ816/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Screen Tight",
+          "count": "28",
+          "value": "2lf",
+          "link": "https://www.homedepot.com/b/Screen-Tight/N-5yc1vZ2lf/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Frigidaire",
+          "count": "24",
+          "value": "75h",
+          "link": "https://www.homedepot.com/b/Frigidaire/N-5yc1vZ75h/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "BuyDecorativeFilm",
+          "count": "23",
+          "value": "mim",
+          "link": "https://www.homedepot.com/b/BuyDecorativeFilm/N-5yc1vZmim/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "MyMINIGLASS",
+          "count": "22",
+          "value": "oik",
+          "link": "https://www.homedepot.com/b/MyMINIGLASS/N-5yc1vZoik/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "First Watch Security",
+          "count": "20",
+          "value": "8ej",
+          "link": "https://www.homedepot.com/b/First-Watch-Security/N-5yc1vZ8ej/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Keystone",
+          "count": "20",
+          "value": "5x4",
+          "link": "https://www.homedepot.com/b/Keystone/N-5yc1vZ5x4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Ultra Protect",
+          "count": "20",
+          "value": "5ed",
+          "link": "https://www.homedepot.com/b/Ultra-Protect/N-5yc1vZ5ed/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "LG",
+          "count": "19",
+          "value": "8qk",
+          "link": "https://www.homedepot.com/b/LG/N-5yc1vZ8qk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ACDelco",
+          "count": "18",
+          "value": "3pu",
+          "link": "https://www.homedepot.com/b/ACDelco/N-5yc1vZ3pu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bilco",
+          "count": "17",
+          "value": "bib",
+          "link": "https://www.homedepot.com/b/Bilco/N-5yc1vZbib/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ProtecSure Max",
+          "count": "15",
+          "value": "zg5",
+          "link": "https://www.homedepot.com/b/ProtecSure-Max/N-5yc1vZzg5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "EZ Tubular Skylight",
+          "count": "13",
+          "value": "mjt",
+          "link": "https://www.homedepot.com/b/EZ-Tubular-Skylight/N-5yc1vZmjt/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Everbilt",
+          "count": "13",
+          "value": "402",
+          "link": "https://www.homedepot.com/b/Everbilt/N-5yc1vZ402/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ProVantage",
+          "count": "13",
+          "value": "gho",
+          "link": "https://www.homedepot.com/b/ProVantage/N-5yc1vZgho/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Segal",
+          "count": "13",
+          "value": "61e",
+          "link": "https://www.homedepot.com/b/Segal/N-5yc1vZ61e/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "FIROMO",
+          "count": "12",
+          "value": "zw7",
+          "link": "https://www.homedepot.com/b/FIROMO/N-5yc1vZzw7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Gordon Skylight",
+          "count": "12",
+          "value": "7km",
+          "link": "https://www.homedepot.com/b/Gordon-Skylight/N-5yc1vZ7km/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Whirlpool",
+          "count": "12",
+          "value": "4l4",
+          "link": "https://www.homedepot.com/b/Whirlpool/N-5yc1vZ4l4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "OE Solutions",
+          "count": "12",
+          "value": "pcl",
+          "link": "https://www.homedepot.com/b/OE-Solutions/N-5yc1vZpcl/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Maxair",
+          "count": "11",
+          "value": "9un",
+          "link": "https://www.homedepot.com/b/Maxair/N-5yc1vZ9un/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Adjust-A-Grate",
+          "count": "10",
+          "value": "4yu",
+          "link": "https://www.homedepot.com/b/Adjust-A-Grate/N-5yc1vZ4yu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bevoi",
+          "count": "10",
+          "value": "teq",
+          "link": "https://www.homedepot.com/b/Bevoi/N-5yc1vZteq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "SolarSkyLite DIY Tubular Skylight",
+          "count": "10",
+          "value": "mm5",
+          "link": "https://www.homedepot.com/b/SolarSkyLite-DIY-Tubular-Skylight/N-5yc1vZmm5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "feldhawk",
+          "count": "10",
+          "value": "zc5",
+          "link": "https://www.homedepot.com/b/feldhawk/N-5yc1vZzc5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ODL",
+          "count": "10",
+          "value": "asz",
+          "link": "https://www.homedepot.com/b/ODL/N-5yc1vZasz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "EZ Screen Room",
+          "count": "9",
+          "value": "7sx",
+          "link": "https://www.homedepot.com/b/EZ-Screen-Room/N-5yc1vZ7sx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "BEHR MARQUEE",
+          "count": "8",
+          "value": "c2l",
+          "link": "https://www.homedepot.com/b/BEHR-MARQUEE/N-5yc1vZc2l/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Stupell Industries",
+          "count": "8",
+          "value": "mfi",
+          "link": "https://www.homedepot.com/b/Stupell-Industries/N-5yc1vZmfi/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "COWSAR",
+          "count": "7",
+          "value": "z11",
+          "link": "https://www.homedepot.com/b/COWSAR/N-5yc1vZz11/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "GE",
+          "count": "7",
+          "value": "lo",
+          "link": "https://www.homedepot.com/b/GE/N-5yc1vZlo/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Karl home",
+          "count": "7",
+          "value": "tyu",
+          "link": "https://www.homedepot.com/b/Karl-home/N-5yc1vZtyu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Wellco",
+          "count": "7",
+          "value": "u4v",
+          "link": "https://www.homedepot.com/b/Wellco/N-5yc1vZu4v/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Fenestrelle",
+          "count": "6",
+          "value": "pou",
+          "link": "https://www.homedepot.com/b/Fenestrelle/N-5yc1vZpou/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "PLYLOX",
+          "count": "6",
+          "value": "vjj",
+          "link": "https://www.homedepot.com/b/PLYLOX/N-5yc1vZvjj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "W B Marvin",
+          "count": "6",
+          "value": "8km",
+          "link": "https://www.homedepot.com/b/W-B-Marvin/N-5yc1vZ8km/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Trademark Fine Art",
+          "count": "6",
+          "value": "byq",
+          "link": "https://www.homedepot.com/b/Trademark-Fine-Art/N-5yc1vZbyq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Amana",
+          "count": "5",
+          "value": "3n2",
+          "link": "https://www.homedepot.com/b/Amana/N-5yc1vZ3n2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "DURASTAR",
+          "count": "5",
+          "value": "104p",
+          "link": "https://www.homedepot.com/b/DURASTAR/N-5yc1vZ104p/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Hardware Essentials",
+          "count": "5",
+          "value": "pe4",
+          "link": "https://www.homedepot.com/b/Hardware-Essentials/N-5yc1vZpe4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Midea",
+          "count": "5",
+          "value": "4xs",
+          "link": "https://www.homedepot.com/b/Midea/N-5yc1vZ4xs/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Permastik",
+          "count": "5",
+          "value": "lr8",
+          "link": "https://www.homedepot.com/b/Permastik/N-5yc1vZlr8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "QuietCool",
+          "count": "5",
+          "value": "exd",
+          "link": "https://www.homedepot.com/b/QuietCool/N-5yc1vZexd/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bali",
+          "count": "4",
+          "value": "emj",
+          "link": "https://www.homedepot.com/b/Bali/N-5yc1vZemj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Best Barns",
+          "count": "4",
+          "value": "66y",
+          "link": "https://www.homedepot.com/b/Best-Barns/N-5yc1vZ66y/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "CGI Impact Resistant Windows & Doors",
+          "count": "4",
+          "value": "10lg",
+          "link": "https://www.homedepot.com/b/CGI-Impact-Resistant-Windows-Doors/N-5yc1vZ10lg/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Danby",
+          "count": "4",
+          "value": "4mv",
+          "link": "https://www.homedepot.com/b/Danby/N-5yc1vZ4mv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Garvee",
+          "count": "4",
+          "value": "zij",
+          "link": "https://www.homedepot.com/b/Garvee/N-5yc1vZzij/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "HANDS ON",
+          "count": "4",
+          "value": "6un",
+          "link": "https://www.homedepot.com/b/HANDS-ON/N-5yc1vZ6un/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Honeywell",
+          "count": "4",
+          "value": "qr",
+          "link": "https://www.homedepot.com/b/Honeywell/N-5yc1vZqr/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "PROAIRA",
+          "count": "4",
+          "value": "yud",
+          "link": "https://www.homedepot.com/b/PROAIRA/N-5yc1vZyud/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "REDI2CRAFT",
+          "count": "4",
+          "value": "fgw",
+          "link": "https://www.homedepot.com/b/REDI2CRAFT/N-5yc1vZfgw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Toshiba",
+          "count": "4",
+          "value": "a49",
+          "link": "https://www.homedepot.com/b/Toshiba/N-5yc1vZa49/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "VinylDoc",
+          "count": "4",
+          "value": "gv1",
+          "link": "https://www.homedepot.com/b/VinylDoc/N-5yc1vZgv1/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Vissani",
+          "count": "4",
+          "value": "4rj",
+          "link": "https://www.homedepot.com/b/Vissani/N-5yc1vZ4rj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "SKYSHALO",
+          "count": "4",
+          "value": "zi5",
+          "link": "https://www.homedepot.com/b/SKYSHALO/N-5yc1vZzi5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "BLACK+DECKER",
+          "count": "3",
+          "value": "e7c",
+          "link": "https://www.homedepot.com/b/BLACK-DECKER/N-5yc1vZe7c/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "FRIGIDAIRE GALLERY",
+          "count": "3",
+          "value": "rfs",
+          "link": "https://www.homedepot.com/b/FRIGIDAIRE-GALLERY/N-5yc1vZrfs/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "NVNOO",
+          "count": "3",
+          "value": "105k",
+          "link": "https://www.homedepot.com/b/NVNOO/N-5yc1vZ105k/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "TOLEDO",
+          "count": "3",
+          "value": "u6r",
+          "link": "https://www.homedepot.com/b/TOLEDO/N-5yc1vZu6r/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "VENETA",
+          "count": "3",
+          "value": "ryk",
+          "link": "https://www.homedepot.com/b/VENETA/N-5yc1vZryk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Vestal Manufacturing",
+          "count": "3",
+          "value": "ohs",
+          "link": "https://www.homedepot.com/b/Vestal-Manufacturing/N-5yc1vZohs/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "BEHR PREMIUM PLUS",
+          "count": "3",
+          "value": "gao",
+          "link": "https://www.homedepot.com/b/BEHR-PREMIUM-PLUS/N-5yc1vZgao/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "BEHR ULTRA",
+          "count": "3",
+          "value": "pkn",
+          "link": "https://www.homedepot.com/b/BEHR-ULTRA/N-5yc1vZpkn/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ARK DESIGN",
+          "count": "2",
+          "value": "vp6",
+          "link": "https://www.homedepot.com/b/ARK-DESIGN/N-5yc1vZvp6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "FRIEDRICH",
+          "count": "2",
+          "value": "igq",
+          "link": "https://www.homedepot.com/b/FRIEDRICH/N-5yc1vZigq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Fypon",
+          "count": "2",
+          "value": "a19",
+          "link": "https://www.homedepot.com/b/Fypon/N-5yc1vZa19/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Handy Home Products",
+          "count": "2",
+          "value": "p6",
+          "link": "https://www.homedepot.com/b/Handy-Home-Products/N-5yc1vZp6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "IDEAL SECURITY",
+          "count": "2",
+          "value": "t5w",
+          "link": "https://www.homedepot.com/b/IDEAL-SECURITY/N-5yc1vZt5w/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Milgard Windows & Doors",
+          "count": "2",
+          "value": "bxx",
+          "link": "https://www.homedepot.com/b/Milgard-Windows-Doors/N-5yc1vZbxx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Seasons",
+          "count": "2",
+          "value": "d1k",
+          "link": "https://www.homedepot.com/b/Seasons/N-5yc1vZd1k/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "TCL",
+          "count": "2",
+          "value": "als",
+          "link": "https://www.homedepot.com/b/TCL/N-5yc1vZals/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "VisiScreen",
+          "count": "2",
+          "value": "fzu",
+          "link": "https://www.homedepot.com/b/VisiScreen/N-5yc1vZfzu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Fablon",
+          "count": "2",
+          "value": "hj2",
+          "link": "https://www.homedepot.com/b/Fablon/N-5yc1vZhj2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "VEVOR",
+          "count": "2",
+          "value": "uc5",
+          "link": "https://www.homedepot.com/b/VEVOR/N-5yc1vZuc5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "VIGO",
+          "count": "2",
+          "value": "7zx",
+          "link": "https://www.homedepot.com/b/VIGO/N-5yc1vZ7zx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "WPS World Power Systems",
+          "count": "2",
+          "value": "nyy",
+          "link": "https://www.homedepot.com/b/WPS-World-Power-Systems/N-5yc1vZnyy/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Anvil Mark",
+          "count": "1",
+          "value": "ijp",
+          "link": "https://www.homedepot.com/b/Anvil-Mark/N-5yc1vZijp/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Arctic Wind",
+          "count": "1",
+          "value": "g4c",
+          "link": "https://www.homedepot.com/b/Arctic-Wind/N-5yc1vZg4c/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "AstroGuard",
+          "count": "1",
+          "value": "5c0",
+          "link": "https://www.homedepot.com/b/AstroGuard/N-5yc1vZ5c0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "CANOPIA by PALRAM",
+          "count": "1",
+          "value": "u1i",
+          "link": "https://www.homedepot.com/b/CANOPIA-by-PALRAM/N-5yc1vZu1i/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Commercial Cool",
+          "count": "1",
+          "value": "8ka",
+          "link": "https://www.homedepot.com/b/Commercial-Cool/N-5yc1vZ8ka/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "DANCO",
+          "count": "1",
+          "value": "3za",
+          "link": "https://www.homedepot.com/b/DANCO/N-5yc1vZ3za/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "FlexScreen",
+          "count": "1",
+          "value": "syi",
+          "link": "https://www.homedepot.com/b/FlexScreen/N-5yc1vZsyi/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Impecca",
+          "count": "1",
+          "value": "dbb",
+          "link": "https://www.homedepot.com/b/Impecca/N-5yc1vZdbb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "NUSET",
+          "count": "1",
+          "value": "cjq",
+          "link": "https://www.homedepot.com/b/NUSET/N-5yc1vZcjq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ProtecSure Entry Door",
+          "count": "1",
+          "value": "100e",
+          "link": "https://www.homedepot.com/b/ProtecSure-Entry-Door/N-5yc1vZ100e/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Protecto Wrap",
+          "count": "1",
+          "value": "40r",
+          "link": "https://www.homedepot.com/b/Protecto-Wrap/N-5yc1vZ40r/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "ROVSUN",
+          "count": "1",
+          "value": "xmz",
+          "link": "https://www.homedepot.com/b/ROVSUN/N-5yc1vZxmz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "The Hillman Group",
+          "count": "1",
+          "value": "3hk",
+          "link": "https://www.homedepot.com/b/The-Hillman-Group/N-5yc1vZ3hk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Tigfo",
+          "count": "1",
+          "value": "10ht",
+          "link": "https://www.homedepot.com/b/Tigfo/N-5yc1vZ10ht/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Western Skylights",
+          "count": "1",
+          "value": "6ju",
+          "link": "https://www.homedepot.com/b/Western-Skylights/N-5yc1vZ6ju/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Windmill",
+          "count": "1",
+          "value": "szv",
+          "link": "https://www.homedepot.com/b/Windmill/N-5yc1vZszv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "A-Street Prints",
+          "count": "1",
+          "value": "rcx",
+          "link": "https://www.homedepot.com/b/A-Street-Prints/N-5yc1vZrcx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bonnie Plants",
+          "count": "1",
+          "value": "a2n",
+          "link": "https://www.homedepot.com/b/Bonnie-Plants/N-5yc1vZa2n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Brewster",
+          "count": "1",
+          "value": "7fh",
+          "link": "https://www.homedepot.com/b/Brewster/N-5yc1vZ7fh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Comfort Zone",
+          "count": "1",
+          "value": "b13",
+          "link": "https://www.homedepot.com/b/Comfort-Zone/N-5yc1vZb13/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Dimex",
+          "count": "1",
+          "value": "asp",
+          "link": "https://www.homedepot.com/b/Dimex/N-5yc1vZasp/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "GERSON INTERNATIONAL",
+          "count": "1",
+          "value": "ua8",
+          "link": "https://www.homedepot.com/b/GERSON-INTERNATIONAL/N-5yc1vZua8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Litton Lane",
+          "count": "1",
+          "value": "nbq",
+          "link": "https://www.homedepot.com/b/Litton-Lane/N-5yc1vZnbq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Shadow Hunter",
+          "count": "1",
+          "value": "fg4",
+          "link": "https://www.homedepot.com/b/Shadow-Hunter/N-5yc1vZfg4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Price",
+      "value": [
+        {
+          "name": "$0 - $10",
+          "count": "424",
+          "value": "12kx",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12kx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$10 - $20",
+          "count": "500",
+          "value": "12ky",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12ky/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$20 - $30",
+          "count": "174",
+          "value": "12kz",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12kz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$30 - $40",
+          "count": "116",
+          "value": "12l0",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$40 - $50",
+          "count": "159",
+          "value": "12l1",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l1/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$50 - $100",
+          "count": "595",
+          "value": "12l2",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$100 - $150",
+          "count": "764",
+          "value": "12l3",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$150 - $200",
+          "count": "903",
+          "value": "12l4",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$200 - $250",
+          "count": "681",
+          "value": "12l5",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$250 - $300",
+          "count": "819",
+          "value": "12l6",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$300 - $400",
+          "count": "683",
+          "value": "12l7",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$400 - $500",
+          "count": "610",
+          "value": "12l8",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$500 - $600",
+          "count": "344",
+          "value": "12l9",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12l9/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$600 - $700",
+          "count": "270",
+          "value": "12la",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12la/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$700 - $800",
+          "count": "207",
+          "value": "12lb",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12lb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$800 - $900",
+          "count": "169",
+          "value": "12lc",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12lc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$900 - $1000",
+          "count": "133",
+          "value": "12ld",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12ld/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$1000 - $2000",
+          "count": "829",
+          "value": "12le",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12le/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$2000 - $3000",
+          "count": "413",
+          "value": "12lf",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12lf/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$3000 - $4000",
+          "count": "99",
+          "value": "12lg",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12lg/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "$4000 - $5000",
+          "count": "1",
+          "value": "12lh",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12lh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Over $5000",
+          "count": "2",
+          "value": "12li",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ12li/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Special Values",
+          "count": "279",
+          "value": "7",
+          "link": "https://www.homedepot.com/b/N-5yc1vZ7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Window Use Type",
+      "value": [
+        {
+          "name": "New Construction",
+          "count": "5571",
+          "value": "1z0uuzq",
+          "link": "https://www.homedepot.com/b/New-Construction/N-5yc1vZ1z0uuzq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Replacement",
+          "count": "5531",
+          "value": "1z0uuzs",
+          "link": "https://www.homedepot.com/b/Replacement/N-5yc1vZ1z0uuzs/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Common Window Sizes",
+      "value": [
+        {
+          "name": "24 in. x 24 in.",
+          "count": "264",
+          "value": "1z1z0n2",
+          "link": "https://www.homedepot.com/b/24-in-x-24-in/N-5yc1vZ1z1z0n2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 36 in.",
+          "count": "257",
+          "value": "1z1z15d",
+          "link": "https://www.homedepot.com/b/36-in-x-36-in/N-5yc1vZ1z1z15d/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 36 in.",
+          "count": "198",
+          "value": "1z1z17b",
+          "link": "https://www.homedepot.com/b/24-in-x-36-in/N-5yc1vZ1z1z17b/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 48 in.",
+          "count": "198",
+          "value": "1z1z0so",
+          "link": "https://www.homedepot.com/b/48-in-x-48-in/N-5yc1vZ1z1z0so/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 60 in.",
+          "count": "144",
+          "value": "1z1z0r5",
+          "link": "https://www.homedepot.com/b/36-in-x-60-in/N-5yc1vZ1z1z0r5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 48 in.",
+          "count": "140",
+          "value": "1z1z17k",
+          "link": "https://www.homedepot.com/b/30-in-x-48-in/N-5yc1vZ1z1z17k/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 30 in.",
+          "count": "138",
+          "value": "1z1z0gt",
+          "link": "https://www.homedepot.com/b/30-in-x-30-in/N-5yc1vZ1z1z0gt/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 18 in.",
+          "count": "105",
+          "value": "1z1z0th",
+          "link": "https://www.homedepot.com/b/18-in-x-18-in/N-5yc1vZ1z1z0th/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 48 in.",
+          "count": "99",
+          "value": "1z1z0um",
+          "link": "https://www.homedepot.com/b/36-in-x-48-in/N-5yc1vZ1z1z0um/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "34 in. x 54 in.",
+          "count": "97",
+          "value": "1z1z0q8",
+          "link": "https://www.homedepot.com/b/34-in-x-54-in/N-5yc1vZ1z1z0q8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 36 in.",
+          "count": "79",
+          "value": "1z1z13n",
+          "link": "https://www.homedepot.com/b/48-in-x-36-in/N-5yc1vZ1z1z13n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 24 in.",
+          "count": "75",
+          "value": "1z1z0kw",
+          "link": "https://www.homedepot.com/b/36-in-x-24-in/N-5yc1vZ1z1z0kw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 36 in.",
+          "count": "49",
+          "value": "1z1z0ne",
+          "link": "https://www.homedepot.com/b/30-in-x-36-in/N-5yc1vZ1z1z0ne/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "60 in. x 48 in.",
+          "count": "45",
+          "value": "1z1z0jm",
+          "link": "https://www.homedepot.com/b/60-in-x-48-in/N-5yc1vZ1z1z0jm/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "60 in. x 36 in.",
+          "count": "41",
+          "value": "1z1z0u9",
+          "link": "https://www.homedepot.com/b/60-in-x-36-in/N-5yc1vZ1z1z0u9/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 30 in.",
+          "count": "40",
+          "value": "1z1z119",
+          "link": "https://www.homedepot.com/b/24-in-x-30-in/N-5yc1vZ1z1z119/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 60 in.",
+          "count": "40",
+          "value": "1z1z0p3",
+          "link": "https://www.homedepot.com/b/48-in-x-60-in/N-5yc1vZ1z1z0p3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 28 in.",
+          "count": "35",
+          "value": "1z1z0m8",
+          "link": "https://www.homedepot.com/b/28-in-x-28-in/N-5yc1vZ1z1z0m8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "60 in. x 60 in.",
+          "count": "33",
+          "value": "1z1z0fz",
+          "link": "https://www.homedepot.com/b/60-in-x-60-in/N-5yc1vZ1z1z0fz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 24 in.",
+          "count": "31",
+          "value": "1z1z0l0",
+          "link": "https://www.homedepot.com/b/32-in-x-24-in/N-5yc1vZ1z1z0l0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 54 in.",
+          "count": "28",
+          "value": "1z1z0km",
+          "link": "https://www.homedepot.com/b/28-in-x-54-in/N-5yc1vZ1z1z0km/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 20 in.",
+          "count": "28",
+          "value": "1z1z0r4",
+          "link": "https://www.homedepot.com/b/32-in-x-20-in/N-5yc1vZ1z1z0r4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 54 in.",
+          "count": "27",
+          "value": "1z1z18h",
+          "link": "https://www.homedepot.com/b/36-in-x-54-in/N-5yc1vZ1z1z18h/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 16 in.",
+          "count": "26",
+          "value": "1z1z0pu",
+          "link": "https://www.homedepot.com/b/32-in-x-16-in/N-5yc1vZ1z1z0pu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 22 in.",
+          "count": "26",
+          "value": "1z1z141",
+          "link": "https://www.homedepot.com/b/32-in-x-22-in/N-5yc1vZ1z1z141/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 14 in.",
+          "count": "25",
+          "value": "1z1z18j",
+          "link": "https://www.homedepot.com/b/32-in-x-14-in/N-5yc1vZ1z1z18j/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 32 in.",
+          "count": "24",
+          "value": "1z1z0ge",
+          "link": "https://www.homedepot.com/b/32-in-x-32-in/N-5yc1vZ1z1z0ge/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 18 in.",
+          "count": "22",
+          "value": "1z1z12n",
+          "link": "https://www.homedepot.com/b/32-in-x-18-in/N-5yc1vZ1z1z12n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 12 in.",
+          "count": "22",
+          "value": "1z1z0tq",
+          "link": "https://www.homedepot.com/b/48-in-x-12-in/N-5yc1vZ1z1z0tq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "22 in. x 22 in.",
+          "count": "20",
+          "value": "1z1z0ng",
+          "link": "https://www.homedepot.com/b/22-in-x-22-in/N-5yc1vZ1z1z0ng/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 48 in.",
+          "count": "19",
+          "value": "1z1z0wy",
+          "link": "https://www.homedepot.com/b/24-in-x-48-in/N-5yc1vZ1z1z0wy/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 42 in.",
+          "count": "17",
+          "value": "1z1z0o2",
+          "link": "https://www.homedepot.com/b/36-in-x-42-in/N-5yc1vZ1z1z0o2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "22 in. x 47 in.",
+          "count": "16",
+          "value": "1z1z13q",
+          "link": "https://www.homedepot.com/b/22-in-x-47-in/N-5yc1vZ1z1z13q/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "22 in. x 39 in.",
+          "count": "14",
+          "value": "1z1z180",
+          "link": "https://www.homedepot.com/b/22-in-x-39-in/N-5yc1vZ1z1z180/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 42 in.",
+          "count": "14",
+          "value": "1z1z0q6",
+          "link": "https://www.homedepot.com/b/24-in-x-42-in/N-5yc1vZ1z1z0q6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "42 in. x 42 in.",
+          "count": "14",
+          "value": "1z1z0zb",
+          "link": "https://www.homedepot.com/b/42-in-x-42-in/N-5yc1vZ1z1z0zb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 42 in.",
+          "count": "14",
+          "value": "1z1z11j",
+          "link": "https://www.homedepot.com/b/30-in-x-42-in/N-5yc1vZ1z1z11j/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 20 in.",
+          "count": "13",
+          "value": "1z1z0t9",
+          "link": "https://www.homedepot.com/b/24-in-x-20-in/N-5yc1vZ1z1z0t9/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "26 in. x 26 in.",
+          "count": "13",
+          "value": "1z1z0mm",
+          "link": "https://www.homedepot.com/b/26-in-x-26-in/N-5yc1vZ1z1z0mm/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 37 in.",
+          "count": "13",
+          "value": "1z1z0nr",
+          "link": "https://www.homedepot.com/b/28-in-x-37-in/N-5yc1vZ1z1z0nr/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 45 in.",
+          "count": "13",
+          "value": "1z1z0ja",
+          "link": "https://www.homedepot.com/b/28-in-x-45-in/N-5yc1vZ1z1z0ja/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "29 in. x 14 in.",
+          "count": "13",
+          "value": "1z1z0o4",
+          "link": "https://www.homedepot.com/b/29-in-x-14-in/N-5yc1vZ1z1z0o4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "29 in. x 16 in.",
+          "count": "13",
+          "value": "1z1z10v",
+          "link": "https://www.homedepot.com/b/29-in-x-16-in/N-5yc1vZ1z1z10v/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "29 in. x 18 in.",
+          "count": "13",
+          "value": "1z1z0i4",
+          "link": "https://www.homedepot.com/b/29-in-x-18-in/N-5yc1vZ1z1z0i4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "29 in. x 20 in.",
+          "count": "13",
+          "value": "1z1z12c",
+          "link": "https://www.homedepot.com/b/29-in-x-20-in/N-5yc1vZ1z1z12c/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "29 in. x 22 in.",
+          "count": "13",
+          "value": "1z1z0jk",
+          "link": "https://www.homedepot.com/b/29-in-x-22-in/N-5yc1vZ1z1z0jk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "29 in. x 24 in.",
+          "count": "13",
+          "value": "1z1z0w7",
+          "link": "https://www.homedepot.com/b/29-in-x-24-in/N-5yc1vZ1z1z0w7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 54 in.",
+          "count": "13",
+          "value": "1z1z0qh",
+          "link": "https://www.homedepot.com/b/30-in-x-54-in/N-5yc1vZ1z1z0qh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 47 in.",
+          "count": "13",
+          "value": "1z1z0ol",
+          "link": "https://www.homedepot.com/b/32-in-x-47-in/N-5yc1vZ1z1z0ol/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "33 in. x 14 in.",
+          "count": "13",
+          "value": "1z1z0md",
+          "link": "https://www.homedepot.com/b/33-in-x-14-in/N-5yc1vZ1z1z0md/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "33 in. x 16 in.",
+          "count": "13",
+          "value": "1z1z0z7",
+          "link": "https://www.homedepot.com/b/33-in-x-16-in/N-5yc1vZ1z1z0z7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "33 in. x 18 in.",
+          "count": "13",
+          "value": "1z1z0gb",
+          "link": "https://www.homedepot.com/b/33-in-x-18-in/N-5yc1vZ1z1z0gb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "33 in. x 20 in.",
+          "count": "13",
+          "value": "1z1z10m",
+          "link": "https://www.homedepot.com/b/33-in-x-20-in/N-5yc1vZ1z1z10m/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "33 in. x 22 in.",
+          "count": "13",
+          "value": "1z1z0hp",
+          "link": "https://www.homedepot.com/b/33-in-x-22-in/N-5yc1vZ1z1z0hp/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "33 in. x 24 in.",
+          "count": "13",
+          "value": "1z1z0uc",
+          "link": "https://www.homedepot.com/b/33-in-x-24-in/N-5yc1vZ1z1z0uc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "35 in. x 14 in.",
+          "count": "13",
+          "value": "1z1z0zc",
+          "link": "https://www.homedepot.com/b/35-in-x-14-in/N-5yc1vZ1z1z0zc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "35 in. x 16 in.",
+          "count": "13",
+          "value": "1z1z0gh",
+          "link": "https://www.homedepot.com/b/35-in-x-16-in/N-5yc1vZ1z1z0gh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "35 in. x 18 in.",
+          "count": "13",
+          "value": "1z1z0ta",
+          "link": "https://www.homedepot.com/b/35-in-x-18-in/N-5yc1vZ1z1z0ta/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "35 in. x 20 in.",
+          "count": "13",
+          "value": "1z1z0hu",
+          "link": "https://www.homedepot.com/b/35-in-x-20-in/N-5yc1vZ1z1z0hu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "35 in. x 22 in.",
+          "count": "13",
+          "value": "1z1z0uh",
+          "link": "https://www.homedepot.com/b/35-in-x-22-in/N-5yc1vZ1z1z0uh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "35 in. x 24 in.",
+          "count": "13",
+          "value": "1z1z16y",
+          "link": "https://www.homedepot.com/b/35-in-x-24-in/N-5yc1vZ1z1z16y/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 30 in.",
+          "count": "13",
+          "value": "1z1z0z2",
+          "link": "https://www.homedepot.com/b/36-in-x-30-in/N-5yc1vZ1z1z0z2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "47 in. x 32 in.",
+          "count": "13",
+          "value": "1z1z10j",
+          "link": "https://www.homedepot.com/b/47-in-x-32-in/N-5yc1vZ1z1z10j/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "22 in. x 28 in.",
+          "count": "12",
+          "value": "1z1z0u6",
+          "link": "https://www.homedepot.com/b/22-in-x-28-in/N-5yc1vZ1z1z0u6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "22 in. x 46 in.",
+          "count": "12",
+          "value": "1z1z0xh",
+          "link": "https://www.homedepot.com/b/22-in-x-46-in/N-5yc1vZ1z1z0xh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 24 in.",
+          "count": "12",
+          "value": "1z1z0sg",
+          "link": "https://www.homedepot.com/b/28-in-x-24-in/N-5yc1vZ1z1z0sg/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "37 in. x 14 in.",
+          "count": "12",
+          "value": "1z1z0m3",
+          "link": "https://www.homedepot.com/b/37-in-x-14-in/N-5yc1vZ1z1z0m3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "37 in. x 16 in.",
+          "count": "12",
+          "value": "1z1z0z0",
+          "link": "https://www.homedepot.com/b/37-in-x-16-in/N-5yc1vZ1z1z0z0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "37 in. x 18 in.",
+          "count": "12",
+          "value": "1z1z0g5",
+          "link": "https://www.homedepot.com/b/37-in-x-18-in/N-5yc1vZ1z1z0g5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "37 in. x 20 in.",
+          "count": "12",
+          "value": "1z1z10d",
+          "link": "https://www.homedepot.com/b/37-in-x-20-in/N-5yc1vZ1z1z10d/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "37 in. x 22 in.",
+          "count": "12",
+          "value": "1z1z0hh",
+          "link": "https://www.homedepot.com/b/37-in-x-22-in/N-5yc1vZ1z1z0hh/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "37 in. x 24 in.",
+          "count": "12",
+          "value": "1z1z0u3",
+          "link": "https://www.homedepot.com/b/37-in-x-24-in/N-5yc1vZ1z1z0u3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 14 in.",
+          "count": "12",
+          "value": "1z1z14j",
+          "link": "https://www.homedepot.com/b/39-in-x-14-in/N-5yc1vZ1z1z14j/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 16 in.",
+          "count": "12",
+          "value": "1z1z0lo",
+          "link": "https://www.homedepot.com/b/39-in-x-16-in/N-5yc1vZ1z1z0lo/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 18 in.",
+          "count": "12",
+          "value": "1z1z0yp",
+          "link": "https://www.homedepot.com/b/39-in-x-18-in/N-5yc1vZ1z1z0yp/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 20 in.",
+          "count": "12",
+          "value": "1z1z0n3",
+          "link": "https://www.homedepot.com/b/39-in-x-20-in/N-5yc1vZ1z1z0n3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 22 in.",
+          "count": "12",
+          "value": "1z1z0zw",
+          "link": "https://www.homedepot.com/b/39-in-x-22-in/N-5yc1vZ1z1z0zw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 24 in.",
+          "count": "12",
+          "value": "1z1z0h5",
+          "link": "https://www.homedepot.com/b/39-in-x-24-in/N-5yc1vZ1z1z0h5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "39 in. x 39 in.",
+          "count": "12",
+          "value": "1z1z0p7",
+          "link": "https://www.homedepot.com/b/39-in-x-39-in/N-5yc1vZ1z1z0p7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "42 in. x 50 in.",
+          "count": "12",
+          "value": "1z1z0ug",
+          "link": "https://www.homedepot.com/b/42-in-x-50-in/N-5yc1vZ1z1z0ug/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 24 in.",
+          "count": "12",
+          "value": "1z1z0j1",
+          "link": "https://www.homedepot.com/b/48-in-x-24-in/N-5yc1vZ1z1z0j1/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "72 in. x 48 in.",
+          "count": "12",
+          "value": "1z1z0hc",
+          "link": "https://www.homedepot.com/b/72-in-x-48-in/N-5yc1vZ1z1z0hc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "22 in. x 54 in.",
+          "count": "11",
+          "value": "1z1z0sm",
+          "link": "https://www.homedepot.com/b/22-in-x-54-in/N-5yc1vZ1z1z0sm/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 54 in.",
+          "count": "11",
+          "value": "1z1z0d6",
+          "link": "https://www.homedepot.com/b/32-in-x-54-in/N-5yc1vZ1z1z0d6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "47 in. x 47 in.",
+          "count": "11",
+          "value": "1z1z187",
+          "link": "https://www.homedepot.com/b/47-in-x-47-in/N-5yc1vZ1z1z187/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 24 in.",
+          "count": "10",
+          "value": "1z1z172",
+          "link": "https://www.homedepot.com/b/18-in-x-24-in/N-5yc1vZ1z1z172/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "45 in. x 28 in.",
+          "count": "10",
+          "value": "1z1z0lz",
+          "link": "https://www.homedepot.com/b/45-in-x-28-in/N-5yc1vZ1z1z0lz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 36 in.",
+          "count": "10",
+          "value": "1z1z15j",
+          "link": "https://www.homedepot.com/b/32-in-x-36-in/N-5yc1vZ1z1z15j/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 12 in.",
+          "count": "9",
+          "value": "1z1z0mt",
+          "link": "https://www.homedepot.com/b/18-in-x-12-in/N-5yc1vZ1z1z0mt/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 14 in.",
+          "count": "9",
+          "value": "1z1z0zj",
+          "link": "https://www.homedepot.com/b/18-in-x-14-in/N-5yc1vZ1z1z0zj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 16 in.",
+          "count": "9",
+          "value": "1z1z0gl",
+          "link": "https://www.homedepot.com/b/18-in-x-16-in/N-5yc1vZ1z1z0gl/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 20 in.",
+          "count": "9",
+          "value": "1z1z0i1",
+          "link": "https://www.homedepot.com/b/18-in-x-20-in/N-5yc1vZ1z1z0i1/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 22 in.",
+          "count": "9",
+          "value": "1z1z0un",
+          "link": "https://www.homedepot.com/b/18-in-x-22-in/N-5yc1vZ1z1z0un/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 26 in.",
+          "count": "9",
+          "value": "1z1z0op",
+          "link": "https://www.homedepot.com/b/18-in-x-26-in/N-5yc1vZ1z1z0op/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 28 in.",
+          "count": "9",
+          "value": "1z1z11e",
+          "link": "https://www.homedepot.com/b/18-in-x-28-in/N-5yc1vZ1z1z11e/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 30 in.",
+          "count": "9",
+          "value": "1z1z0pv",
+          "link": "https://www.homedepot.com/b/18-in-x-30-in/N-5yc1vZ1z1z0pv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 32 in.",
+          "count": "9",
+          "value": "1z1z12p",
+          "link": "https://www.homedepot.com/b/18-in-x-32-in/N-5yc1vZ1z1z12p/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 33 in.",
+          "count": "9",
+          "value": "1z1z0d8",
+          "link": "https://www.homedepot.com/b/18-in-x-33-in/N-5yc1vZ1z1z0d8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 35 in.",
+          "count": "9",
+          "value": "1z1z0q4",
+          "link": "https://www.homedepot.com/b/18-in-x-35-in/N-5yc1vZ1z1z0q4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 37 in.",
+          "count": "9",
+          "value": "1z1z12z",
+          "link": "https://www.homedepot.com/b/18-in-x-37-in/N-5yc1vZ1z1z12z/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 39 in.",
+          "count": "9",
+          "value": "1z1z0k4",
+          "link": "https://www.homedepot.com/b/18-in-x-39-in/N-5yc1vZ1z1z0k4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 60 in.",
+          "count": "9",
+          "value": "1z1z14i",
+          "link": "https://www.homedepot.com/b/30-in-x-60-in/N-5yc1vZ1z1z14i/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 42 in.",
+          "count": "9",
+          "value": "1z1z0lw",
+          "link": "https://www.homedepot.com/b/48-in-x-42-in/N-5yc1vZ1z1z0lw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 60 in.",
+          "count": "8",
+          "value": "1z1z7o5",
+          "link": "https://www.homedepot.com/b/32-in-x-60-in/N-5yc1vZ1z1z7o5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "47 in. x 11 in.",
+          "count": "8",
+          "value": "1z1z0dq",
+          "link": "https://www.homedepot.com/b/47-in-x-11-in/N-5yc1vZ1z1z0dq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "72 in. x 36 in.",
+          "count": "8",
+          "value": "1z1z0s5",
+          "link": "https://www.homedepot.com/b/72-in-x-36-in/N-5yc1vZ1z1z0s5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 60 in.",
+          "count": "7",
+          "value": "1z1z0te",
+          "link": "https://www.homedepot.com/b/24-in-x-60-in/N-5yc1vZ1z1z0te/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 24 in.",
+          "count": "7",
+          "value": "1z1z0yi",
+          "link": "https://www.homedepot.com/b/30-in-x-24-in/N-5yc1vZ1z1z0yi/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 42 in.",
+          "count": "7",
+          "value": "1z1z0ob",
+          "link": "https://www.homedepot.com/b/32-in-x-42-in/N-5yc1vZ1z1z0ob/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 48 in.",
+          "count": "7",
+          "value": "1z1z0ut",
+          "link": "https://www.homedepot.com/b/32-in-x-48-in/N-5yc1vZ1z1z0ut/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "34 in. x 34 in.",
+          "count": "7",
+          "value": "1z1z15s",
+          "link": "https://www.homedepot.com/b/34-in-x-34-in/N-5yc1vZ1z1z15s/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "42 in. x 48 in.",
+          "count": "7",
+          "value": "1z1z886",
+          "link": "https://www.homedepot.com/b/42-in-x-48-in/N-5yc1vZ1z1z886/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 54 in.",
+          "count": "7",
+          "value": "1z1z88n",
+          "link": "https://www.homedepot.com/b/48-in-x-54-in/N-5yc1vZ1z1z88n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 46 in.",
+          "count": "6",
+          "value": "1z1z0pc",
+          "link": "https://www.homedepot.com/b/28-in-x-46-in/N-5yc1vZ1z1z0pc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "20 in. x 29 in.",
+          "count": "6",
+          "value": "1z1z0nj",
+          "link": "https://www.homedepot.com/b/20-in-x-29-in/N-5yc1vZ1z1z0nj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 72 in.",
+          "count": "6",
+          "value": "1z1z0ir",
+          "link": "https://www.homedepot.com/b/24-in-x-72-in/N-5yc1vZ1z1z0ir/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "26 in. x 34 in.",
+          "count": "6",
+          "value": "1z1z0hv",
+          "link": "https://www.homedepot.com/b/26-in-x-34-in/N-5yc1vZ1z1z0hv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 72 in.",
+          "count": "6",
+          "value": "1z1z80h",
+          "link": "https://www.homedepot.com/b/30-in-x-72-in/N-5yc1vZ1z1z80h/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 12 in.",
+          "count": "6",
+          "value": "1z1z0w4",
+          "link": "https://www.homedepot.com/b/32-in-x-12-in/N-5yc1vZ1z1z0w4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 46 in.",
+          "count": "6",
+          "value": "1z1z0ia",
+          "link": "https://www.homedepot.com/b/32-in-x-46-in/N-5yc1vZ1z1z0ia/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 72 in.",
+          "count": "6",
+          "value": "1z1z0gc",
+          "link": "https://www.homedepot.com/b/36-in-x-72-in/N-5yc1vZ1z1z0gc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "42 in. x 36 in.",
+          "count": "6",
+          "value": "1z1z0l4",
+          "link": "https://www.homedepot.com/b/42-in-x-36-in/N-5yc1vZ1z1z0l4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "42 in. x 54 in.",
+          "count": "6",
+          "value": "1z1z7x8",
+          "link": "https://www.homedepot.com/b/42-in-x-54-in/N-5yc1vZ1z1z7x8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "60 in. x 42 in.",
+          "count": "6",
+          "value": "1z1z17v",
+          "link": "https://www.homedepot.com/b/60-in-x-42-in/N-5yc1vZ1z1z17v/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 54 in.",
+          "count": "5",
+          "value": "1z1z0f8",
+          "link": "https://www.homedepot.com/b/24-in-x-54-in/N-5yc1vZ1z1z0f8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 36 in.",
+          "count": "5",
+          "value": "1z1z0hj",
+          "link": "https://www.homedepot.com/b/28-in-x-36-in/N-5yc1vZ1z1z0hj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 38 in.",
+          "count": "5",
+          "value": "1z1z0u7",
+          "link": "https://www.homedepot.com/b/28-in-x-38-in/N-5yc1vZ1z1z0u7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 42 in.",
+          "count": "5",
+          "value": "1z1z0vg",
+          "link": "https://www.homedepot.com/b/28-in-x-42-in/N-5yc1vZ1z1z0vg/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 48 in.",
+          "count": "5",
+          "value": "1z1z129",
+          "link": "https://www.homedepot.com/b/28-in-x-48-in/N-5yc1vZ1z1z129/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "31 in. x 37 in.",
+          "count": "5",
+          "value": "1z1z130",
+          "link": "https://www.homedepot.com/b/31-in-x-37-in/N-5yc1vZ1z1z130/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 38 in.",
+          "count": "5",
+          "value": "1z1z0mz",
+          "link": "https://www.homedepot.com/b/32-in-x-38-in/N-5yc1vZ1z1z0mz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "34 in. x 41 in.",
+          "count": "5",
+          "value": "1z1z0uq",
+          "link": "https://www.homedepot.com/b/34-in-x-41-in/N-5yc1vZ1z1z0uq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "36 in. x 20 in.",
+          "count": "5",
+          "value": "1z1z0qz",
+          "link": "https://www.homedepot.com/b/36-in-x-20-in/N-5yc1vZ1z1z0qz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "48 in. x 30 in.",
+          "count": "5",
+          "value": "1z1z0wu",
+          "link": "https://www.homedepot.com/b/48-in-x-30-in/N-5yc1vZ1z1z0wu/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "72 in. x 42 in.",
+          "count": "5",
+          "value": "1z1z161",
+          "link": "https://www.homedepot.com/b/72-in-x-42-in/N-5yc1vZ1z1z161/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "34 in. x 57 in.",
+          "count": "4",
+          "value": "1z1z0dj",
+          "link": "https://www.homedepot.com/b/34-in-x-57-in/N-5yc1vZ1z1z0dj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "38 in. x 57 in.",
+          "count": "4",
+          "value": "1z1z0jd",
+          "link": "https://www.homedepot.com/b/38-in-x-57-in/N-5yc1vZ1z1z0jd/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "26 in. x 41 in.",
+          "count": "4",
+          "value": "1z1z12f",
+          "link": "https://www.homedepot.com/b/26-in-x-41-in/N-5yc1vZ1z1z12f/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 60 in.",
+          "count": "4",
+          "value": "1z21ffc",
+          "link": "https://www.homedepot.com/b/28-in-x-60-in/N-5yc1vZ1z21ffc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 41 in.",
+          "count": "4",
+          "value": "1z1z0v1",
+          "link": "https://www.homedepot.com/b/30-in-x-41-in/N-5yc1vZ1z1z0v1/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 49 in.",
+          "count": "4",
+          "value": "1z1z0j5",
+          "link": "https://www.homedepot.com/b/30-in-x-49-in/N-5yc1vZ1z1z0j5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 53 in.",
+          "count": "4",
+          "value": "1z1z0k8",
+          "link": "https://www.homedepot.com/b/30-in-x-53-in/N-5yc1vZ1z1z0k8/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "30 in. x 57 in.",
+          "count": "4",
+          "value": "1z1z0ds",
+          "link": "https://www.homedepot.com/b/30-in-x-57-in/N-5yc1vZ1z1z0ds/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "31 in. x 53 in.",
+          "count": "4",
+          "value": "1z1z0tg",
+          "link": "https://www.homedepot.com/b/31-in-x-53-in/N-5yc1vZ1z1z0tg/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "31 in. x 57 in.",
+          "count": "4",
+          "value": "1z1z0nb",
+          "link": "https://www.homedepot.com/b/31-in-x-57-in/N-5yc1vZ1z1z0nb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "38 in. x 49 in.",
+          "count": "4",
+          "value": "1z1z0nv",
+          "link": "https://www.homedepot.com/b/38-in-x-49-in/N-5yc1vZ1z1z0nv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "71 in. x 59 in.",
+          "count": "4",
+          "value": "1z1z0mc",
+          "link": "https://www.homedepot.com/b/71-in-x-59-in/N-5yc1vZ1z1z0mc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 52 in.",
+          "count": "3",
+          "value": "1z1z7os",
+          "link": "https://www.homedepot.com/b/32-in-x-52-in/N-5yc1vZ1z1z7os/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "24 in. x 38 in.",
+          "count": "3",
+          "value": "1z1z0p0",
+          "link": "https://www.homedepot.com/b/24-in-x-38-in/N-5yc1vZ1z1z0p0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "26 in. x 36 in.",
+          "count": "3",
+          "value": "1z1z0uk",
+          "link": "https://www.homedepot.com/b/26-in-x-36-in/N-5yc1vZ1z1z0uk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "28 in. x 53 in.",
+          "count": "3",
+          "value": "1z1z0dz",
+          "link": "https://www.homedepot.com/b/28-in-x-53-in/N-5yc1vZ1z1z0dz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "31 in. x 61 in.",
+          "count": "3",
+          "value": "1z1z0on",
+          "link": "https://www.homedepot.com/b/31-in-x-61-in/N-5yc1vZ1z1z0on/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "32 in. x 61 in.",
+          "count": "3",
+          "value": "1z1z0xx",
+          "link": "https://www.homedepot.com/b/32-in-x-61-in/N-5yc1vZ1z1z0xx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "18 in. x 36 in.",
+          "count": "1",
+          "value": "1z1z7ot",
+          "link": "https://www.homedepot.com/b/18-in-x-36-in/N-5yc1vZ1z1z7ot/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "31 in. x 15 in.",
+          "count": "1",
+          "value": "1z1z15p",
+          "link": "https://www.homedepot.com/b/31-in-x-15-in/N-5yc1vZ1z1z15p/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "31 in. x 19 in.",
+          "count": "1",
+          "value": "1z1z100",
+          "link": "https://www.homedepot.com/b/31-in-x-19-in/N-5yc1vZ1z1z100/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Glazing Type",
+      "value": [
+        {
+          "name": "Double-Pane",
+          "count": "5677",
+          "value": "1z0twoo",
+          "link": "https://www.homedepot.com/b/Double-Pane/N-5yc1vZ1z0twoo/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Triple-Pane",
+          "count": "65",
+          "value": "1z0tq5l",
+          "link": "https://www.homedepot.com/b/Triple-Pane/N-5yc1vZ1z0tq5l/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Single-Pane",
+          "count": "24",
+          "value": "1z0tskw",
+          "link": "https://www.homedepot.com/b/Single-Pane/N-5yc1vZ1z0tskw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Glass Type",
+      "value": [
+        {
+          "name": "Privacy Glass",
+          "count": "3114",
+          "value": "1z1c2bz",
+          "link": "https://www.homedepot.com/b/Privacy-Glass/N-5yc1vZ1z1c2bz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Low-E Glass",
+          "count": "1774",
+          "value": "1z1c2ck",
+          "link": "https://www.homedepot.com/b/Low-E-Glass/N-5yc1vZ1z1c2ck/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Insulated Glass",
+          "count": "1290",
+          "value": "1z1udny",
+          "link": "https://www.homedepot.com/b/Insulated-Glass/N-5yc1vZ1z1udny/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Standard Glass",
+          "count": "956",
+          "value": "1z1c24v",
+          "link": "https://www.homedepot.com/b/Standard-Glass/N-5yc1vZ1z1c24v/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Energy Efficient Glass",
+          "count": "717",
+          "value": "1z1c29p",
+          "link": "https://www.homedepot.com/b/Energy-Efficient-Glass/N-5yc1vZ1z1c29p/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Tempered Glass",
+          "count": "333",
+          "value": "1z1c255",
+          "link": "https://www.homedepot.com/b/Tempered-Glass/N-5yc1vZ1z1c255/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Laminated Glass",
+          "count": "153",
+          "value": "1z1c283",
+          "link": "https://www.homedepot.com/b/Laminated-Glass/N-5yc1vZ1z1c283/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Patterned Glass",
+          "count": "133",
+          "value": "1z1c2df",
+          "link": "https://www.homedepot.com/b/Patterned-Glass/N-5yc1vZ1z1c2df/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Plastic",
+          "count": "124",
+          "value": "1z1c2gv",
+          "link": "https://www.homedepot.com/b/Plastic/N-5yc1vZ1z1c2gv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Tinted Glass",
+          "count": "117",
+          "value": "1z1c2dt",
+          "link": "https://www.homedepot.com/b/Tinted-Glass/N-5yc1vZ1z1c2dt/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Toughened Glass",
+          "count": "104",
+          "value": "1z1c29h",
+          "link": "https://www.homedepot.com/b/Toughened-Glass/N-5yc1vZ1z1c29h/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Exterior Color/Finish Family",
+      "value": [
+        {
+          "name": "White",
+          "count": "1234",
+          "value": "1z0rmot",
+          "link": "https://www.homedepot.com/b/White/N-5yc1vZ1z0rmot/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Black",
+          "count": "591",
+          "value": "1z0qghj",
+          "link": "https://www.homedepot.com/b/Black/N-5yc1vZ1z0qghj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Tan",
+          "count": "575",
+          "value": "1z0rhet",
+          "link": "https://www.homedepot.com/b/Tan/N-5yc1vZ1z0rhet/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bronze",
+          "count": "534",
+          "value": "1z0rk2z",
+          "link": "https://www.homedepot.com/b/Bronze/N-5yc1vZ1z0rk2z/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Gray",
+          "count": "53",
+          "value": "1z0rhg3",
+          "link": "https://www.homedepot.com/b/Gray/N-5yc1vZ1z0rhg3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Brown",
+          "count": "49",
+          "value": "1z0rher",
+          "link": "https://www.homedepot.com/b/Brown/N-5yc1vZ1z0rher/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Clay",
+          "count": "12",
+          "value": "1z23g7t",
+          "link": "https://www.homedepot.com/b/Clay/N-5yc1vZ1z23g7t/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Sand",
+          "count": "12",
+          "value": "1z23g2w",
+          "link": "https://www.homedepot.com/b/Sand/N-5yc1vZ1z23g2w/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Features",
+      "value": [
+        {
+          "name": "Integrated Nail Fin",
+          "count": "2170",
+          "value": "1z0qytd",
+          "link": "https://www.homedepot.com/b/Integrated-Nail-Fin/N-5yc1vZ1z0qytd/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Venting",
+          "count": "2124",
+          "value": "1z0rmov",
+          "link": "https://www.homedepot.com/b/Venting/N-5yc1vZ1z0rmov/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Insect Screen",
+          "count": "1890",
+          "value": "1z1824k",
+          "link": "https://www.homedepot.com/b/Insect-Screen/N-5yc1vZ1z1824k/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Argon Gas Filled",
+          "count": "1619",
+          "value": "1z1udmb",
+          "link": "https://www.homedepot.com/b/Argon-Gas-Filled/N-5yc1vZ1z1udmb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "No Additional Features",
+          "count": "1221",
+          "value": "1z0r1b4",
+          "link": "https://www.homedepot.com/b/No-Additional-Features/N-5yc1vZ1z0r1b4/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Security Lock",
+          "count": "1212",
+          "value": "1z1856t",
+          "link": "https://www.homedepot.com/b/Security-Lock/N-5yc1vZ1z1856t/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Paintable/Stainable",
+          "count": "949",
+          "value": "1z0rmoy",
+          "link": "https://www.homedepot.com/b/Paintable-Stainable/N-5yc1vZ1z0rmoy/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Tilt-In Cleaning",
+          "count": "673",
+          "value": "1z0rmoz",
+          "link": "https://www.homedepot.com/b/Tilt-In-Cleaning/N-5yc1vZ1z0rmoz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Severe Weather Ready",
+          "count": "310",
+          "value": "1z182dg",
+          "link": "https://www.homedepot.com/b/Severe-Weather-Ready/N-5yc1vZ1z182dg/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Impact Resistant",
+          "count": "297",
+          "value": "1z0pxnj",
+          "link": "https://www.homedepot.com/b/Impact-Resistant/N-5yc1vZ1z0pxnj/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Egress",
+          "count": "281",
+          "value": "1z1sg18",
+          "link": "https://www.homedepot.com/b/Egress/N-5yc1vZ1z1sg18/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Light Transmittal",
+          "count": "262",
+          "value": "1z18658",
+          "link": "https://www.homedepot.com/b/Light-Transmittal/N-5yc1vZ1z18658/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Adjustable",
+          "count": "175",
+          "value": "1z184ru",
+          "link": "https://www.homedepot.com/b/Adjustable/N-5yc1vZ1z184ru/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Integral J-channel",
+          "count": "150",
+          "value": "1z0rmox",
+          "link": "https://www.homedepot.com/b/Integral-J-channel/N-5yc1vZ1z0rmox/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Swing-away",
+          "count": "92",
+          "value": "1z1854y",
+          "link": "https://www.homedepot.com/b/Swing-away/N-5yc1vZ1z1854y/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Pre-installed Shade",
+          "count": "78",
+          "value": "1z210tc",
+          "link": "https://www.homedepot.com/b/Pre-installed-Shade/N-5yc1vZ1z210tc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Rotates for Cleaning",
+          "count": "72",
+          "value": "1z18eew",
+          "link": "https://www.homedepot.com/b/Rotates-for-Cleaning/N-5yc1vZ1z18eew/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Flat Roof Compatible",
+          "count": "40",
+          "value": "1z218dk",
+          "link": "https://www.homedepot.com/b/Flat-Roof-Compatible/N-5yc1vZ1z218dk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Brickmould",
+          "count": "30",
+          "value": "1z185lt",
+          "link": "https://www.homedepot.com/b/Brickmould/N-5yc1vZ1z185lt/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Permanent",
+          "count": "15",
+          "value": "1z184au",
+          "link": "https://www.homedepot.com/b/Permanent/N-5yc1vZ1z184au/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Double Tilt Release",
+          "count": "14",
+          "value": "1z18j8y",
+          "link": "https://www.homedepot.com/b/Double-Tilt-Release/N-5yc1vZ1z18j8y/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Built-In Window",
+          "count": "12",
+          "value": "1z18atp",
+          "link": "https://www.homedepot.com/b/Built-In-Window/N-5yc1vZ1z18atp/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Remote Controlled",
+          "count": "11",
+          "value": "1z182e7",
+          "link": "https://www.homedepot.com/b/Remote-Controlled/N-5yc1vZ1z182e7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Meets Egress Requirements",
+          "count": "2",
+          "value": "1z18biv",
+          "link": "https://www.homedepot.com/b/Meets-Egress-Requirements/N-5yc1vZ1z18biv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Interior Color/Finish Family",
+      "value": [
+        {
+          "name": "White",
+          "count": "4349",
+          "value": "1z0rmou",
+          "link": "https://www.homedepot.com/b/White/N-5yc1vZ1z0rmou/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Unfinished Wood",
+          "count": "978",
+          "value": "1z0rk32",
+          "link": "https://www.homedepot.com/b/Unfinished-Wood/N-5yc1vZ1z0rk32/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Tan",
+          "count": "363",
+          "value": "1z0rheq",
+          "link": "https://www.homedepot.com/b/Tan/N-5yc1vZ1z0rheq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Black",
+          "count": "83",
+          "value": "1z1t28q",
+          "link": "https://www.homedepot.com/b/Black/N-5yc1vZ1z1t28q/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Bronze",
+          "count": "66",
+          "value": "1z0rk2y",
+          "link": "https://www.homedepot.com/b/Bronze/N-5yc1vZ1z0rk2y/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Brown",
+          "count": "50",
+          "value": "1z0lar2",
+          "link": "https://www.homedepot.com/b/Brown/N-5yc1vZ1z0lar2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Gray",
+          "count": "6",
+          "value": "1z0rhg2",
+          "link": "https://www.homedepot.com/b/Gray/N-5yc1vZ1z0rhg2/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Yellow",
+          "count": "1",
+          "value": "1z0r5kk",
+          "link": "https://www.homedepot.com/b/Yellow/N-5yc1vZ1z0r5kk/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Frame Material",
+      "value": [
+        {
+          "name": "Vinyl",
+          "count": "1792",
+          "value": "1z0rrk7",
+          "link": "https://www.homedepot.com/b/Vinyl/N-5yc1vZ1z0rrk7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Aluminum",
+          "count": "996",
+          "value": "1z0t5hp",
+          "link": "https://www.homedepot.com/b/Aluminum/N-5yc1vZ1z0t5hp/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Wood Clad",
+          "count": "97",
+          "value": "1z18awn",
+          "link": "https://www.homedepot.com/b/Wood-Clad/N-5yc1vZ1z18awn/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Composite",
+          "count": "49",
+          "value": "1z0rrk5",
+          "link": "https://www.homedepot.com/b/Composite/N-5yc1vZ1z0rrk5/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Compatible Size Code",
+      "value": [
+        {
+          "name": "C01",
+          "count": "2",
+          "value": "1z1cylf",
+          "link": "https://www.homedepot.com/b/C01/N-5yc1vZ1z1cylf/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "C04",
+          "count": "2",
+          "value": "1z1cylm",
+          "link": "https://www.homedepot.com/b/C04/N-5yc1vZ1z1cylm/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "C06",
+          "count": "2",
+          "value": "1z1cylq",
+          "link": "https://www.homedepot.com/b/C06/N-5yc1vZ1z1cylq/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "M02",
+          "count": "2",
+          "value": "1z1cylx",
+          "link": "https://www.homedepot.com/b/M02/N-5yc1vZ1z1cylx/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "M08",
+          "count": "2",
+          "value": "1z1cym9",
+          "link": "https://www.homedepot.com/b/M08/N-5yc1vZ1z1cym9/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "S01",
+          "count": "2",
+          "value": "1z1cycs",
+          "link": "https://www.homedepot.com/b/S01/N-5yc1vZ1z1cycs/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "S06",
+          "count": "2",
+          "value": "1z1cycy",
+          "link": "https://www.homedepot.com/b/S06/N-5yc1vZ1z1cycy/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "2230",
+          "count": "1",
+          "value": "1z1cy6d",
+          "link": "https://www.homedepot.com/b/2230/N-5yc1vZ1z1cy6d/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "2234",
+          "count": "1",
+          "value": "1z1cy6m",
+          "link": "https://www.homedepot.com/b/2234/N-5yc1vZ1z1cy6m/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "2246",
+          "count": "1",
+          "value": "1z1cy7v",
+          "link": "https://www.homedepot.com/b/2246/N-5yc1vZ1z1cy7v/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "2270",
+          "count": "1",
+          "value": "1z1r6g0",
+          "link": "https://www.homedepot.com/b/2270/N-5yc1vZ1z1r6g0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "3030",
+          "count": "1",
+          "value": "1z1cyhz",
+          "link": "https://www.homedepot.com/b/3030/N-5yc1vZ1z1cyhz/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "3046",
+          "count": "1",
+          "value": "1z1cyjo",
+          "link": "https://www.homedepot.com/b/3046/N-5yc1vZ1z1cyjo/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "3434",
+          "count": "1",
+          "value": "1z1cyro",
+          "link": "https://www.homedepot.com/b/3434/N-5yc1vZ1z1cyro/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "3446",
+          "count": "1",
+          "value": "1z1cy4g",
+          "link": "https://www.homedepot.com/b/3446/N-5yc1vZ1z1cy4g/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "4622",
+          "count": "1",
+          "value": "1z1cynb",
+          "link": "https://www.homedepot.com/b/4622/N-5yc1vZ1z1cynb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "4646",
+          "count": "1",
+          "value": "1z1cypw",
+          "link": "https://www.homedepot.com/b/4646/N-5yc1vZ1z1cypw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "A06",
+          "count": "1",
+          "value": "1z1cyhb",
+          "link": "https://www.homedepot.com/b/A06/N-5yc1vZ1z1cyhb/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "C08",
+          "count": "1",
+          "value": "1z1cylr",
+          "link": "https://www.homedepot.com/b/C08/N-5yc1vZ1z1cylr/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "C12",
+          "count": "1",
+          "value": "1z1r6tv",
+          "link": "https://www.homedepot.com/b/C12/N-5yc1vZ1z1r6tv/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "D06",
+          "count": "1",
+          "value": "1z1cyc7",
+          "link": "https://www.homedepot.com/b/D06/N-5yc1vZ1z1cyc7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "D26",
+          "count": "1",
+          "value": "1z1cyew",
+          "link": "https://www.homedepot.com/b/D26/N-5yc1vZ1z1cyew/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "M04",
+          "count": "1",
+          "value": "1z1cym0",
+          "link": "https://www.homedepot.com/b/M04/N-5yc1vZ1z1cym0/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "M06",
+          "count": "1",
+          "value": "1z1cym6",
+          "link": "https://www.homedepot.com/b/M06/N-5yc1vZ1z1cym6/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Glass Pattern",
+      "value": [
+        {
+          "name": "Ice Pattern",
+          "count": "1003",
+          "value": "1z1sd05",
+          "link": "https://www.homedepot.com/b/Ice-Pattern/N-5yc1vZ1z1sd05/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Wave Pattern",
+          "count": "968",
+          "value": "1z1sd0z",
+          "link": "https://www.homedepot.com/b/Wave-Pattern/N-5yc1vZ1z1sd0z/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Diamond Pattern",
+          "count": "864",
+          "value": "1z1sd0l",
+          "link": "https://www.homedepot.com/b/Diamond-Pattern/N-5yc1vZ1z1sd0l/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Clear",
+          "count": "114",
+          "value": "1z1sd24",
+          "link": "https://www.homedepot.com/b/Clear/N-5yc1vZ1z1sd24/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Cuneis Pattern",
+          "count": "24",
+          "value": "1z1yypc",
+          "link": "https://www.homedepot.com/b/Cuneis-Pattern/N-5yc1vZ1z1yypc/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Savona Pattern",
+          "count": "23",
+          "value": "1z1zkkd",
+          "link": "https://www.homedepot.com/b/Savona-Pattern/N-5yc1vZ1z1zkkd/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Frosted",
+          "count": "21",
+          "value": "1z1sd2w",
+          "link": "https://www.homedepot.com/b/Frosted/N-5yc1vZ1z1sd2w/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    },
+    {
+      "key": "Included",
+      "value": [
+        {
+          "name": "Screen",
+          "count": "2429",
+          "value": "1z1c2e7",
+          "link": "https://www.homedepot.com/b/Screen/N-5yc1vZ1z1c2e7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Vent",
+          "count": "1857",
+          "value": "1z1saju",
+          "link": "https://www.homedepot.com/b/Vent/N-5yc1vZ1z1saju/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "No Additional Items Included",
+          "count": "1706",
+          "value": "1z1c2f7",
+          "link": "https://www.homedepot.com/b/No-Additional-Items-Included/N-5yc1vZ1z1c2f7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Grid",
+          "count": "1179",
+          "value": "1z1c27z",
+          "link": "https://www.homedepot.com/b/Grid/N-5yc1vZ1z1c27z/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Hardware",
+          "count": "1142",
+          "value": "1z1c2go",
+          "link": "https://www.homedepot.com/b/Hardware/N-5yc1vZ1z1c2go/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Remote Control",
+          "count": "131",
+          "value": "1z1c2el",
+          "link": "https://www.homedepot.com/b/Remote-Control/N-5yc1vZ1z1c2el/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Flashing",
+          "count": "125",
+          "value": "1z1c2g3",
+          "link": "https://www.homedepot.com/b/Flashing/N-5yc1vZ1z1c2g3/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Batteries",
+          "count": "110",
+          "value": "1z2168i",
+          "link": "https://www.homedepot.com/b/Batteries/N-5yc1vZ1z2168i/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Frame",
+          "count": "14",
+          "value": "1z1ym9n",
+          "link": "https://www.homedepot.com/b/Frame/N-5yc1vZ1z1ym9n/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Spline",
+          "count": "12",
+          "value": "1z1yo8a",
+          "link": "https://www.homedepot.com/b/Spline/N-5yc1vZ1z1yo8a/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Underlayment",
+          "count": "11",
+          "value": "1z21qcw",
+          "link": "https://www.homedepot.com/b/Underlayment/N-5yc1vZ1z21qcw/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Corner",
+          "count": "10",
+          "value": "1z1yoam",
+          "link": "https://www.homedepot.com/b/Corner/N-5yc1vZ1z1yoam/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Shelves",
+          "count": "5",
+          "value": "1z1c2du",
+          "link": "https://www.homedepot.com/b/Shelves/N-5yc1vZ1z1c2du/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Shade",
+          "count": "3",
+          "value": "1z23bcd",
+          "link": "https://www.homedepot.com/b/Shade/N-5yc1vZ1z23bcd/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        },
+        {
+          "name": "Blind",
+          "count": "2",
+          "value": "1z1c2b7",
+          "link": "https://www.homedepot.com/b/Blind/N-5yc1vZ1z1c2b7/Ntk-elasticplus/Ntt-windows?NCNI-5"
+        }
+      ]
+    }
+  ],
+  "related_products": [
+    "ventanas de seguridad",
+    "aluminum windows",
+    "air master windows",
+    "36x48 window",
+    "puertas",
+    "ventanas miami",
+    "36x60 window",
+    "air master windows and doors"
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.homedepot.com/b/N-5yc1v/Ntt-windows?Nao=24",
+    "other_pages": {
+      "2": "https://www.homedepot.com/b/N-5yc1v/Ntt-windows?Nao=24",
+      "3": "https://www.homedepot.com/b/N-5yc1v/Ntt-windows?Nao=48",
+      "4": "https://www.homedepot.com/b/N-5yc1v/Ntt-windows?Nao=72",
+      "5": "https://www.homedepot.com/b/N-5yc1v/Ntt-windows?Nao=96"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?country=us&delivery_zip=04401&engine=home_depot&nao=24&page=1&ps=24&q=windows&store_id=2414",
+    "next": "https://serpapi.com/search.json?country=us&delivery_zip=04401&engine=home_depot&nao=24&page=1&ps=24&q=windows&store_id=2414",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?country=us&delivery_zip=04401&engine=home_depot&nao=24&page=1&ps=24&q=windows&store_id=2414",
+      "3": "https://serpapi.com/search.json?country=us&delivery_zip=04401&engine=home_depot&nao=48&page=1&ps=24&q=windows&store_id=2414",
+      "4": "https://serpapi.com/search.json?country=us&delivery_zip=04401&engine=home_depot&nao=72&page=1&ps=24&q=windows&store_id=2414",
+      "5": "https://serpapi.com/search.json?country=us&delivery_zip=04401&engine=home_depot&nao=96&page=1&ps=24&q=windows&store_id=2414"
+    }
+  }
+}

@@ -105,7 +105,7 @@ class HomeDepotScraper:
         
         logger.info(f"[{request_id}] Found {len(product_containers)} product containers")
         
-        for idx, container in enumerate(product_containers[:1]):  # Limit to 24 products
+        for idx, container in enumerate(product_containers[:24]):  # Limit to 24 products
             try:
                 product = await self._extract_single_product(container, idx + 1)
                 if product:
@@ -119,8 +119,28 @@ class HomeDepotScraper:
     async def _extract_single_product(self, container: BeautifulSoup, position: int) -> Optional[Dict[str, Any]]:
         """Extract information for a single product"""
         try:
-            # Extract product ID from link
-            product_link = container.find('a', href=True)
+            # Debug: Log the container HTML structure for the first product
+            if position == 1:
+                logger.info(f"First product container HTML snippet: {str(container)[:500]}...")
+            # Extract product link and ID - updated selectors
+            link_selectors = [
+                'a[data-testid="product-link"]',
+                'a[data-automation-id="product-link"]', 
+                'a[href*="/p/"]',
+                'a[href*="product"]',
+                'a.sui-btn-text',  # Based on Home Depot's button classes
+                'h3 a',
+                'h2 a', 
+                '.product-title a',
+                'a:first-child'
+            ]
+            
+            product_link = None
+            for selector in link_selectors:
+                product_link = container.select_one(selector)
+                if product_link and product_link.get('href'):
+                    break
+            
             if not product_link:
                 return None
             
@@ -131,75 +151,375 @@ class HomeDepotScraper:
             if not product_id:
                 return None
             
-            # Extract title
-            title_elem = container.find('span', {'data-testid': 'product-title'}) or \
-                        container.find('a', class_=re.compile(r'product-title'))
-            title = title_elem.get_text(strip=True) if title_elem else "N/A"
+            # Extract title - updated selectors based on Home Depot structure
+            title_selectors = [
+                'h3[data-testid="product-title"]',
+                'h2[data-testid="product-title"]',
+                'span[data-testid="product-title"]',
+                'a[data-testid="product-title"]',
+                'h3.sui-h6-bold',  # Home Depot uses these heading classes
+                'h2.sui-h5-bold',
+                'h3.sui-text-base',
+                '.product-title',
+                'h3 a',
+                'h2 a',
+                'a[data-testid="product-link"]',
+                '.product-name',
+                'span.sui-line-clamp-2',  # Product titles often use line clamping
+                'a[data-automation-id="product-title"]',
+                '.product-pod__title',
+                '.browse-search__pod__title'
+            ]
             
-            # Extract price
-            price_elem = container.find('span', {'data-testid': 'price'}) or \
-                        container.find('span', class_=re.compile(r'price'))
-            price_text = price_elem.get_text(strip=True) if price_elem else "0"
-            price = self._parse_price(price_text)
+            title = "Product Title Not Found"
+            for selector in title_selectors:
+                title_elem = container.select_one(selector)
+                if title_elem:
+                    title_text = title_elem.get_text(strip=True)
+                    if title_text and len(title_text) > 3:  # Ensure it's a meaningful title
+                        title = title_text
+                        break
             
-            # Extract image thumbnails
-            img_elem = container.find('img')
+            # If still no title, try getting it from the product link
+            if title == "Product Title Not Found" and product_link:
+                link_text = product_link.get_text(strip=True)
+                if link_text and len(link_text) > 3:
+                    title = link_text
+            
+            # Extract price - improved logic for variable pricing
+            price_selectors = [
+                'span[data-testid="price"]',
+                'span[data-automation-id="product-price"]',
+                'div[data-testid="price-range"]',  # For price ranges
+                'span.sui-text-xl.sui-font-bold',  # Common price styling
+                'span.sui-text-lg.sui-font-bold',
+                'span.sui-text-2xl.sui-font-bold',  # Larger price text
+                'span.price',
+                'span.price-format',
+                '.price__dollars',
+                '.price-current',
+                '.price-display',
+                'span[aria-label*="dollar"]',
+                '.price-range__start',
+                '.price-from',
+                '.starting-at'
+            ]
+            
+            price = 0.0
+            price_text = ""
+            price_range = None
+            
+            # First try to find specific price elements
+            for selector in price_selectors:
+                try:
+                    price_elem = container.select_one(selector)
+                    if price_elem:
+                        price_text = price_elem.get_text(strip=True)
+                        
+                        # Check for price ranges (e.g., "$10.99 - $25.99" or "Starting at $15.99")
+                        if 'starting' in price_text.lower() or 'from' in price_text.lower():
+                            # Extract the starting price
+                            price_match = re.search(r'\$([\d,]+(?:\.\d{2})?)', price_text)
+                            if price_match:
+                                price = self._parse_price(price_match.group())
+                                price_range = f"Starting at {price_match.group()}"
+                                break
+                        elif '-' in price_text and '$' in price_text:
+                            # Handle price ranges like "$10.99 - $25.99"
+                            prices = re.findall(r'\$([\d,]+(?:\.\d{2})?)', price_text)
+                            if len(prices) >= 2:
+                                price = self._parse_price(f"${prices[0]}")
+                                price_range = price_text
+                                break
+                            elif len(prices) == 1:
+                                price = self._parse_price(f"${prices[0]}")
+                                break
+                        else:
+                            # Regular single price
+                            parsed_price = self._parse_price(price_text)
+                            if parsed_price > 0:
+                                price = parsed_price
+                                break
+                except Exception as e:
+                    continue
+            
+            # If still no price found, search for any dollar amounts in the container
+            if price == 0.0:
+                # Look for price patterns in all text
+                all_text = container.get_text()
+                
+                # Try different price patterns
+                price_patterns = [
+                    r'\$([\d,]+\.\d{2})',  # $123.45
+                    r'\$([\d,]+)',          # $123
+                    r'([\d,]+\.\d{2})\s*dollars?',  # 123.45 dollars
+                    r'([\d,]+)\s*dollars?'           # 123 dollars
+                ]
+                
+                for pattern in price_patterns:
+                    matches = re.findall(pattern, all_text, re.IGNORECASE)
+                    if matches:
+                        for match in matches:
+                            parsed_price = self._parse_price(f"${match}")
+                            if parsed_price > 0:
+                                price = parsed_price
+                                break
+                    if price > 0:
+                        break
+                
+                # Last resort: find any dollar sign followed by numbers
+                if price == 0.0:
+                    dollar_matches = re.findall(r'\$[\d,]+(?:\.\d{2})?', all_text)
+                    if dollar_matches:
+                        # Take the first reasonable price (not too small, not too large)
+                        for match in dollar_matches:
+                            parsed_price = self._parse_price(match)
+                            if 0.01 <= parsed_price <= 50000:  # Reasonable price range
+                                price = parsed_price
+                                break
+            
+            # Extract thumbnail image
+            img_selectors = [
+                'img[data-testid="product-image"]',
+                'img[data-automation-id="product-image"]',
+                'img[data-testid="product-pod-image"]',
+                '.product-image img',
+                '.product-thumbnail img',
+                'img[alt*="product"]',
+                'img[src*="product"]',
+                'picture img',
+                'img.sui-object-contain',  # Home Depot image styling
+                'img.sui-object-cover',
+                'img:first-child'
+            ]
+            
             thumbnails = []
-            if img_elem and img_elem.get('src'):
-                base_url = img_elem['src']
-                # Generate different sizes like in the example
-                sizes = ['65', '100', '145', '300', '400', '600', '1000']
-                thumbnail_set = []
-                for size in sizes:
-                    thumbnail_url = base_url.replace('_65.', f'_{size}.')
-                    thumbnail_set.append(thumbnail_url)
-                thumbnails.append(thumbnail_set)
+            for selector in img_selectors:
+                img_elem = container.select_one(selector)
+                if img_elem and img_elem.get('src'):
+                    thumbnail_url = img_elem['src']
+                    if not thumbnail_url.startswith('http'):
+                        thumbnail_url = f"https://www.homedepot.com{thumbnail_url}"
+                    
+                    # Create thumbnail set
+                    thumbnail_set = []
+                    if thumbnail_url:
+                        thumbnail_set.append(thumbnail_url)
+                    thumbnails.append(thumbnail_set)
+                    break
             
-            # Extract brand
-            brand_elem = container.find('span', {'data-testid': 'product-brand'}) or \
-                        container.find('span', class_=re.compile(r'brand'))
-            brand = brand_elem.get_text(strip=True) if brand_elem else "N/A"
+            # Extract brand - improved extraction with multiple strategies
+            brand_selectors = [
+                'span[data-testid="brand"]',
+                'span[data-automation-id="brand"]',
+                'a[data-testid="brand-link"]',
+                '.brand',
+                '.product-brand',
+                '.manufacturer',
+                'span.brand-name',
+                '[data-brand]',
+                'span.sui-text-subtle',  # Home Depot uses this for secondary info
+                'span.sui-text-sm.sui-text-subtle',
+                '.brand-link',
+                'div[data-testid="brand-info"]'
+            ]
             
-            # Extract model number
-            model_elem = container.find('span', {'data-testid': 'product-model'}) or \
-                        container.find('span', class_=re.compile(r'model'))
-            model_number = model_elem.get_text(strip=True) if model_elem else "N/A"
+            brand = "Unknown Brand"
             
-            # Extract rating and reviews
-            rating_elem = container.find('span', class_=re.compile(r'rating'))
+            # Try specific brand selectors first
+            for selector in brand_selectors:
+                brand_elem = container.select_one(selector)
+                if brand_elem:
+                    brand_text = brand_elem.get_text(strip=True)
+                    if brand_text and len(brand_text) > 1 and not brand_text.lower() in ['brand', 'manufacturer', 'by']:
+                        brand = brand_text
+                        break
+            
+            # If no brand found, try extracting from title
+            if brand == "Unknown Brand":
+                # Common brand patterns in titles
+                brand_patterns = [
+                    r'^([A-Z][A-Za-z\s&]+?)\s+[A-Z]',  # Brand at start of title
+                    r'by\s+([A-Z][A-Za-z\s&]+)',      # "by BrandName"
+                    r'([A-Z][A-Z\s]+)\s+\d',          # All caps brand before model number
+                ]
+                
+                for pattern in brand_patterns:
+                    brand_match = re.search(pattern, title)
+                    if brand_match:
+                        potential_brand = brand_match.group(1).strip()
+                        # Filter out common non-brand words
+                        if potential_brand.lower() not in ['the', 'with', 'for', 'and', 'model', 'item', 'product']:
+                            brand = potential_brand
+                            break
+            
+            # If still no brand, look for it in any text within the container
+            if brand == "Unknown Brand":
+                container_text = container.get_text()
+                # Look for common brand indicators
+                brand_indicators = re.findall(r'(?:Brand|Manufacturer|Made by)\s*:?\s*([A-Za-z][A-Za-z\s&]+)', container_text, re.IGNORECASE)
+                if brand_indicators:
+                    brand = brand_indicators[0].strip()
+            
+            # Extract model number - improved extraction with pattern matching
+            model_selectors = [
+                'span[data-testid="model"]',
+                'span[data-automation-id="model"]',
+                'span[data-testid="model-number"]',
+                'span[data-testid="sku"]',
+                '.model',
+                '.model-number',
+                '.product-model',
+                '.sku',
+                '.product-sku',
+                'span.sui-text-xs.sui-text-subtle',  # Model numbers often in small subtle text
+                'div[data-testid="product-info"] span'
+            ]
+            
+            model_number = "N/A"
+            
+            # Try specific model selectors first
+            for selector in model_selectors:
+                model_elems = container.select(selector)  # Use select to get all matches
+                for model_elem in model_elems:
+                    model_text = model_elem.get_text(strip=True)
+                    if model_text and len(model_text) > 1:
+                        # Check if this looks like a model number
+                        if re.search(r'[A-Z0-9]{3,}', model_text) or 'model' in model_text.lower():
+                            model_number = model_text
+                            break
+                if model_number != "N/A":
+                    break
+            
+            # If no model found, search for model patterns in container text
+            if model_number == "N/A":
+                container_text = container.get_text()
+                
+                # Common model number patterns
+                model_patterns = [
+                    r'(?:Model|Item|SKU)\s*[#:]?\s*([A-Z0-9][A-Z0-9\-_]{2,})',  # Model: ABC123
+                    r'#([A-Z0-9][A-Z0-9\-_]{3,})',                              # #ABC123
+                    r'\b([A-Z]{2,}[0-9]{2,}[A-Z0-9\-_]*)\b',                   # ABC123XYZ
+                    r'\b([0-9]{3,}[A-Z]{2,}[A-Z0-9\-_]*)\b',                   # 123ABCXYZ
+                ]
+                
+                for pattern in model_patterns:
+                    model_matches = re.findall(pattern, container_text, re.IGNORECASE)
+                    if model_matches:
+                        # Take the first reasonable model number
+                        for match in model_matches:
+                            if len(match) >= 3 and len(match) <= 20:  # Reasonable length
+                                model_number = match
+                                break
+                        if model_number != "N/A":
+                            break
+            
+            # Extract rating and reviews - updated selectors
+            rating_selectors = [
+                'span[data-testid="rating"]',
+                'span[data-automation-id="rating"]',
+                'div[data-testid="rating-stars"]',
+                '.rating',
+                '.stars',
+                '.star-rating',
+                'span[aria-label*="star"]',
+                'span[aria-label*="rating"]',
+                '.review-stars',
+                '.product-rating',
+                'div.sui-flex[aria-label*="star"]'  # Home Depot rating containers
+            ]
+            
             rating = 0.0
+            for selector in rating_selectors:
+                rating_elem = container.select_one(selector)
+                if rating_elem:
+                    # Try to get rating from aria-label first
+                    aria_label = rating_elem.get('aria-label', '')
+                    if aria_label:
+                        rating_match = re.search(r'(\d+\.?\d*)', aria_label)
+                        if rating_match:
+                            rating = float(rating_match.group(1))
+                            if position == 1:
+                                logger.info(f"Found rating {rating} from aria-label: {aria_label}")
+                            break
+                    
+                    # Try to get rating from text content
+                    rating_text = rating_elem.get_text(strip=True)
+                    if rating_text:
+                        rating_match = re.search(r'(\d+\.?\d*)', rating_text)
+                        if rating_match:
+                            rating = float(rating_match.group(1))
+                            break
+            
+            # Extract reviews count
+            review_selectors = [
+                'span[data-testid="reviews"]',
+                'span[data-automation-id="reviews"]',
+                'span[data-testid="review-count"]',
+                'a[data-testid="reviews-link"]',
+                '.review-count',
+                '.reviews-count',
+                '.product-reviews',
+                'span:contains("review")',
+                'a:contains("review")',
+                'span.sui-text-sm:contains("review")',  # Reviews often in small text
+                'a.sui-btn-text:contains("review")'  # Review links as text buttons
+            ]
+            
             reviews = 0
-            
-            if rating_elem:
-                rating_text = rating_elem.get_text(strip=True)
-                rating_match = re.search(r'(\d+\.?\d*)', rating_text)
-                if rating_match:
-                    rating = float(rating_match.group(1))
-            
-            reviews_elem = container.find('span', class_=re.compile(r'review'))
-            if reviews_elem:
-                reviews_text = reviews_elem.get_text(strip=True)
-                reviews_match = re.search(r'(\d+)', reviews_text)
-                if reviews_match:
-                    reviews = int(reviews_match.group(1))
+            for selector in review_selectors:
+                if ':contains(' in selector:
+                    # Handle special :contains selector
+                    review_elems = container.find_all(['span', 'a'])
+                    for elem in review_elems:
+                        text = elem.get_text(strip=True).lower()
+                        if 'review' in text:
+                            reviews_match = re.search(r'(\d+)', text)
+                            if reviews_match:
+                                reviews = int(reviews_match.group(1))
+                                break
+                    if reviews > 0:
+                        break
+                else:
+                    reviews_elem = container.select_one(selector)
+                    if reviews_elem:
+                        reviews_text = reviews_elem.get_text(strip=True)
+                        reviews_match = re.search(r'(\d+)', reviews_text)
+                        if reviews_match:
+                            reviews = int(reviews_match.group(1))
+                            break
             
             # Build full product URL
             full_link = href if href.startswith('http') else f"https://www.homedepot.com{href}"
+            
+            # Debug logging for first product
+            if position == 1:
+                logger.info(f"Product {position}: title='{title}', price={price}, brand='{brand}', model='{model_number}'")
+                logger.info(f"Product {position}: rating={rating}, reviews={reviews}, thumbnails_count={len(thumbnails)}")
+                logger.info(f"Product {position}: product_id='{product_id}', link='{href}'")
+                if price_range:
+                    logger.info(f"Product {position}: price_range='{price_range}'")
             
             # Build product data
             product = {
                 "position": position,
                 "product_id": product_id,
                 "title": title,
-                "thumbnails": thumbnails,
                 "link": full_link,
-                "model_number": model_number,
                 "brand": brand,
-                "collection": "https://www.homedepot.com",
+                "model_number": model_number,
+                "price": price,
                 "rating": rating,
-                "reviews": reviews,
-                "price": price
+                "reviews": reviews
             }
+            
+            # Add price range info if available
+            if price_range:
+                product["price_range"] = price_range
+            
+            # Add thumbnails if available
+            if thumbnails:
+                product["thumbnails"] = thumbnails
             
             # Add optional fields if available
             if rating >= 4.5:
@@ -207,15 +527,15 @@ class HomeDepotScraper:
             elif rating >= 4.0:
                 product["badges"] = ["highly rated"]
             
-            # Add delivery and pickup info (mock data based on typical HD behavior)
-            product["delivery"] = {
-                "free": price > 45,
-                "free_delivery_threshold": price <= 45
-            }
-            
-            product["pickup"] = {
-                "free_ship_to_store": True
-            }
+            # Add availability info if price was found
+            if price > 0:
+                product["delivery"] = {
+                    "available": True,
+                    "free_shipping": price > 45
+                }
+                product["pickup"] = {
+                    "available": True
+                }
             
             return product
             
@@ -279,14 +599,35 @@ class HomeDepotScraper:
         return mock_filters
 
     def _parse_price(self, price_text: str) -> float:
-        """Parse price from text"""
+        """Parse price from text with improved regex"""
         if not price_text:
             return 0.0
         
-        # Remove currency symbols and extract number
-        price_match = re.search(r'(\d+(?:\.\d{2})?)', price_text.replace(',', ''))
-        if price_match:
-            return float(price_match.group(1))
+        # Clean the text and extract price
+        cleaned_text = price_text.replace(',', '').replace('$', '').strip()
+        
+        # Remove common non-price text
+        cleaned_text = re.sub(r'(starting at|from|each|per|was|now|save|off)', '', cleaned_text, flags=re.IGNORECASE)
+        cleaned_text = cleaned_text.strip()
+        
+        # Try different price patterns
+        price_patterns = [
+            r'(\d+\.\d{2})',  # 123.45
+            r'(\d+\.\d{1})',  # 123.4
+            r'(\d+)',         # 123
+        ]
+        
+        for pattern in price_patterns:
+            price_match = re.search(pattern, cleaned_text)
+            if price_match:
+                try:
+                    price = float(price_match.group(1))
+                    # Validate price is reasonable
+                    if 0.01 <= price <= 50000:
+                        return price
+                except ValueError:
+                    continue
+        
         return 0.0
 
     def _get_store_info(self, zip_code: str) -> Dict[str, str]:
