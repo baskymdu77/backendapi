@@ -349,7 +349,7 @@ class HomeDepotScraper:
                 "price": price,
                 "rating": rating,
                 "reviews": reviews,
-                "html": str(container),
+                # "html": str(container),
                 "details_html": details_html
             }
             
