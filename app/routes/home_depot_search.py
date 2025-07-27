@@ -99,7 +99,7 @@ class HomeDepotScraper:
         
         logger.info(f"[{request_id}] Found {len(product_containers)} product containers")
         
-        for idx, container in enumerate(product_containers[:1]):  # Limit to 24 products
+        for idx, container in enumerate(product_containers[:24]):  # Limit to 24 products
             try:
                 product = await self._extract_single_product(container, idx + 1, location)
                 if product:
