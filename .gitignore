@@ -75,3 +75,4 @@ staticfiles/
 *.bak
 *.swp
 *~.nib
+firebase-admin.json
