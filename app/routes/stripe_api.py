@@ -17,11 +17,28 @@ def get_stripe_api_key() -> str:
     return api_key
 
 
-def get_webhook_secret() -> str:
-    secret = os.getenv("STRIPE_WEBHOOK_SECRET")
-    if not secret:
-        raise HTTPException(status_code=500, detail="STRIPE_WEBHOOK_SECRET not configured")
-    return secret
+def get_webhook_secrets() -> List[str]:
+    """Return one or more webhook signing secrets.
+
+    Supports either STRIPE_WEBHOOK_SECRET (single) or STRIPE_WEBHOOK_SECRETS (comma-separated).
+    """
+    multi = os.getenv("STRIPE_WEBHOOK_SECRETS")
+    single = os.getenv("STRIPE_WEBHOOK_SECRET")
+    secrets: List[str] = []
+    if multi:
+        secrets.extend([s.strip() for s in multi.split(",") if s.strip()])
+    if single:
+        secrets.append(single.strip())
+    # Deduplicate while preserving order
+    seen = set()
+    deduped = []
+    for s in secrets:
+        if s and s not in seen:
+            seen.add(s)
+            deduped.append(s)
+    if not deduped:
+        raise HTTPException(status_code=500, detail="STRIPE_WEBHOOK_SECRET(S) not configured")
+    return deduped
 
 
 @router.get("/products")
@@ -144,19 +161,49 @@ async def stripe_webhook(request: Request):
     - Updates projects/{projectId}.paid based on status
     """
     payload_bytes = await request.body()
-    sig_header = request.headers.get("stripe-signature")
-    endpoint_secret = get_webhook_secret()
-
-    try:
-        event = stripe.Webhook.construct_event(
-            payload_bytes.decode("utf-8"), sig_header, endpoint_secret
+    # Headers is case-insensitive; prefer canonical 'stripe-signature', but also check fallback
+    sig_header = request.headers.get("stripe-signature") or request.headers.get("STRIPE_SIGNATURE")
+    secrets = get_webhook_secrets()
+    print("sig_header", sig_header)
+    print("secrets", secrets)
+    if not sig_header:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Missing Stripe signature header. Expected 'stripe-signature'. "
+                "Ensure your Stripe webhook is pointing to /api/v1/stripe/webhook and that any proxy/CDN forwards all headers."
+            ),
         )
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Webhook error: {e}")
+
+    last_err = None
+    for secret in secrets:
+        try:
+            # Use raw UTF-8 decoded string of the exact request body
+            payload_str = payload_bytes.decode("utf-8")
+            event = stripe.Webhook.construct_event(payload_str, sig_header, secret)
+            break
+        except stripe.error.SignatureVerificationError as e:
+            print("event", "SignatureVerificationError error")
+            last_err = e
+            event = None
+            continue
+        except Exception as e:
+            print("event", "Exception event error")
+            last_err = e
+            event = None
+            continue 
+    if event is None:
+        print("event", "non event error")
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Invalid Stripe signature: {last_err}. Verify STRIPE_WEBHOOK_SECRET/STRIPE_WEBHOOK_SECRETS "
+                f"match the source (CLI/Dashboard) and environment (test/live)."
+            ),
+        )
 
     event_type = event.get("type")
     data_object = event.get("data", {}).get("object", {})
-
     # Determine projectId and paymentIntentId
     project_id = None
     payment_intent_id = None
@@ -168,19 +215,19 @@ async def stripe_webhook(request: Request):
         payment_intent_id = data_object.get("payment_intent")
         # Charge may carry metadata too
         project_id = (data_object.get("metadata") or {}).get("projectId")
-
-    if not project_id:
-        # Nothing to persist without project id
-        return {"received": True, "ignored": True}
+    elif data_object.get("object") == "checkout.session":
+        # Persist Checkout session events for traceability, but do not toggle paid here
+        payment_intent_id = data_object.get("payment_intent")
+        project_id = (data_object.get("metadata") or {}).get("projectId")
 
     db = get_firestore()
-    proj_ref = db.collection("projects").document(project_id)
-    stripe_ref = proj_ref.collection("stripe").document(payment_intent_id or event.get("id"))
+    event_id = event.get("id")
 
     # Build a compact record
     record = {
-        "eventId": event.get("id"),
+        "eventId": event_id,
         "eventType": event_type,
+        "objectType": data_object.get("object"),
         "projectId": project_id,
         "paymentIntentId": payment_intent_id,
         "amount": data_object.get("amount"),
@@ -190,18 +237,23 @@ async def stripe_webhook(request: Request):
         "createdAt": firebase_firestore.SERVER_TIMESTAMP,
     }
 
-    # Persist in subcollection
-    stripe_ref.set(record, merge=True)
+    # Always archive globally
+    db.collection("stripe_events").document(event_id).set(record, merge=True)
 
-    # Update paid flag based on event
-    paid = None
-    if event_type in ("payment_intent.succeeded", "charge.succeeded"):
-        paid = True
-    elif event_type in ("payment_intent.payment_failed", "payment_intent.canceled", "charge.refunded"):
-        paid = False
+    # If we have a project id, also persist under the project subcollection
+    if project_id:
+        proj_ref = db.collection("projects").document(project_id)
+        proj_ref.collection("stripe").document(event_id).set(record, merge=True)
 
-    if paid is not None:
-        proj_ref.set({"paid": paid, "updatedAt": firebase_firestore.SERVER_TIMESTAMP}, merge=True)
+        # Update paid flag based on event (avoid toggling on checkout.session events)
+        paid = None
+        if event_type in ("payment_intent.succeeded", "charge.succeeded"):
+            paid = True
+        elif event_type in ("payment_intent.payment_failed", "payment_intent.canceled", "charge.refunded"):
+            paid = False
+
+        if paid is not None:
+            proj_ref.set({"paid": paid, "updatedAt": firebase_firestore.SERVER_TIMESTAMP}, merge=True)
 
     return {"received": True}
 
