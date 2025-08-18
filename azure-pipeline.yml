@@ -32,6 +32,12 @@ stages:
 
            sudo echo "SERPAPI_API_KEY=$(SERPAPI_API_KEY)" >> .env
 
+           sudo echo "FIREBASE_CREDENTIALS_BASE64=$(FIREBASE_CREDENTIALS_BASE64)" >> .env
+
+           sudo echo "STRIPE_SECRET_KEY=$(STRIPE_SECRET_KEY)" >> .env
+
+           sudo echo "STRIPE_WEBHOOK_SECRET=$(STRIPE_WEBHOOK_SECRET)" >> .env
+
     - task: SSH@0
       name: DockerDeploy
       inputs:
