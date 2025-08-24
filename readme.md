@@ -163,3 +163,4 @@ POST /openai/prompt-only
 
 [License information here]
 
+git push azure main --force
