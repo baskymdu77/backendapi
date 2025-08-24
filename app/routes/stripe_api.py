@@ -245,6 +245,65 @@ async def stripe_webhook(request: Request):
         proj_ref = db.collection("projects").document(project_id)
         proj_ref.collection("stripe").document(event_id).set(record, merge=True)
 
+        # If this is a Checkout completion event, fetch line items and store them in the project doc
+        if event_type == "checkout.session.completed":
+            try:
+                stripe.api_key = get_stripe_api_key()
+                session_id = data_object.get("id")
+                line_items = stripe.checkout.Session.list_line_items(
+                    session_id, expand=["data.price.product"]
+                )
+                purchased_items = []
+                for li in getattr(line_items, "data", []) or []:
+                    price = li.get("price") or {}
+                    product = price.get("product")
+                    if isinstance(product, dict):
+                        product_id = product.get("id")
+                        product_name = product.get("name")
+                        product_meta = product.get("metadata") or {}
+                    else:
+                        product_id = product
+                        product_name = None
+                        product_meta = {}
+                    purchased_items.append(
+                        {
+                            "priceId": price.get("id"),
+                            "productId": (product_meta.get("productId") if isinstance(product_meta, dict) else None) or product_id,
+                            "productName": product_name or li.get("description"),
+                            "quantity": li.get("quantity"),
+                            "amountSubtotal": li.get("amount_subtotal"),
+                            "amountTotal": li.get("amount_total"),
+                            "currency": li.get("currency") or data_object.get("currency"),
+                        }
+                    )
+
+                amount_total = data_object.get("amount_total")
+                if amount_total is None:
+                    try:
+                        amount_total = sum([(i.get("amountTotal") or 0) for i in purchased_items])
+                    except Exception:
+                        amount_total = None
+
+                proj_ref.set(
+                    {
+                        "lastPurchase": {
+                            "source": "checkout",
+                            "sessionId": session_id,
+                            "paymentIntentId": payment_intent_id,
+                            "items": purchased_items,
+                            "amountTotal": amount_total,
+                            "currency": data_object.get("currency"),
+                            "updatedAt": firebase_firestore.SERVER_TIMESTAMP,
+                        }
+                    },
+                    merge=True,
+                )
+            except Exception as e:
+                # Log the error under the project's stripe subcollection but do not fail the webhook
+                proj_ref.collection("stripe").document(f"{event_id}_items_error").set(
+                    {"error": str(e), "createdAt": firebase_firestore.SERVER_TIMESTAMP}, merge=True
+                )
+
         # Update paid flag based on event (avoid toggling on checkout.session events)
         paid = None
         if event_type in ("payment_intent.succeeded", "charge.succeeded"):
