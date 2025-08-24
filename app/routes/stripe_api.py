@@ -304,6 +304,87 @@ async def stripe_webhook(request: Request):
                     {"error": str(e), "createdAt": firebase_firestore.SERVER_TIMESTAMP}, merge=True
                 )
 
+            # Also append to a running purchasedItems array and persist a purchases/{eventId} history doc
+            try:
+                # 1) Append to purchasedItems (concatenate across purchases)
+                items_with_keys = [
+                    {**it, "eventId": event_id, "sessionId": session_id} for it in purchased_items
+                ]
+                proj_ref.set(
+                    {
+                        "purchasedItems": firebase_firestore.ArrayUnion(items_with_keys),
+                        "updatedAt": firebase_firestore.SERVER_TIMESTAMP,
+                    },
+                    merge=True,
+                )
+
+                # 2) Write a per-purchase history document
+                proj_ref.collection("purchases").document(event_id).set(
+                    {
+                        "eventId": event_id,
+                        "sessionId": session_id,
+                        "paymentIntentId": payment_intent_id,
+                        "items": purchased_items,
+                        "amountTotal": amount_total,
+                        "currency": data_object.get("currency"),
+                        "createdAt": firebase_firestore.SERVER_TIMESTAMP,
+                    },
+                    merge=True,
+                )
+
+                # 3) Maintain an aggregate by productId with summed quantity and totals
+                try:
+                    snap = proj_ref.get()
+                    existing = snap.to_dict() if snap and snap.exists else {}
+                except Exception:
+                    existing = {}
+                existing_items = ((existing or {}).get("purchaseAggregate") or {}).get("items") or []
+                by_id = {}
+                for it in existing_items:
+                    pid = it.get("productId")
+                    if not pid:
+                        continue
+                    by_id[pid] = {
+                        "productId": pid,
+                        "productName": it.get("productName"),
+                        "quantity": int(it.get("quantity") or 0),
+                        "amountTotal": int(it.get("amountTotal") or 0),
+                        "currency": it.get("currency") or data_object.get("currency"),
+                    }
+                for it in purchased_items:
+                    pid = it.get("productId")
+                    if not pid:
+                        continue
+                    cur = by_id.get(pid) or {
+                        "productId": pid,
+                        "productName": it.get("productName"),
+                        "quantity": 0,
+                        "amountTotal": 0,
+                        "currency": it.get("currency") or data_object.get("currency"),
+                    }
+                    cur["quantity"] = int(cur.get("quantity") or 0) + int(it.get("quantity") or 0)
+                    cur["amountTotal"] = int(cur.get("amountTotal") or 0) + int(it.get("amountTotal") or 0)
+                    # Prefer latest name/currency
+                    if it.get("productName"):
+                        cur["productName"] = it.get("productName")
+                    if it.get("currency"):
+                        cur["currency"] = it.get("currency")
+                    by_id[pid] = cur
+
+                proj_ref.set(
+                    {
+                        "purchaseAggregate": {
+                            "items": list(by_id.values()),
+                            "updatedAt": firebase_firestore.SERVER_TIMESTAMP,
+                        }
+                    },
+                    merge=True,
+                )
+            except Exception as e:
+                proj_ref.collection("stripe").document(f"{event_id}_concat_error").set(
+                    {"error": str(e), "createdAt": firebase_firestore.SERVER_TIMESTAMP}, merge=True
+                )
+
         # Update paid flag based on event (avoid toggling on checkout.session events)
         paid = None
         if event_type in ("payment_intent.succeeded", "charge.succeeded"):
