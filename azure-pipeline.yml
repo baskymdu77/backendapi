@@ -39,6 +39,8 @@ stages:
 
            sudo echo "STRIPE_WEBHOOK_SECRET=$(STRIPE_WEBHOOK_SECRET)" >> .env
 
+           sudo echo "HOME_DEPOT_CACHE_DAYS=$(HOME_DEPOT_CACHE_DAYS=)" >> .env
+
     - task: SSH@0
       name: DockerDeploy
       inputs:
