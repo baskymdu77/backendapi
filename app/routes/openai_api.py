@@ -118,13 +118,15 @@ async def process_file(
     file: UploadFile = File(...),
     prompt: str = Form(...),
     model: str = Form("o4-mini"),
+    temperature: float = Form(0.7),
 ):
     """
     Process a PDF or image file with a given prompt using OpenAI API.
-    
+
     - file: PDF or image file to process
     - prompt: Instructions for processing the file content
     - model: OpenAI model to use (default: o4-mini)
+    - temperature: Controls randomness (0.0-2.0, default: 0.7)
     """
     start_time = time.time()
     request_id = f"file-{int(start_time)}"
@@ -160,6 +162,7 @@ async def process_file(
             logger.info(f"[{request_id}] Calling OpenAI API with PDF content and prompt")
             response = client.chat.completions.create(
                 model=model,
+                temperature=temperature,
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant that processes PDF content."},
                     {"role": "user", "content": f"PDF Content: {pdf_text}\n\nPrompt: {prompt}"}
@@ -175,6 +178,7 @@ async def process_file(
             logger.info(f"[{request_id}] Calling OpenAI Vision API with image and prompt")
             response = client.chat.completions.create(
                 model=model,  # Use vision model for images
+                temperature=temperature,
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant that analyzes images."},
                     {
@@ -211,11 +215,17 @@ async def process_file(
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/prompt-only")
-async def prompt_only(prompt: str = Form(...)):
+async def prompt_only(
+    prompt: str = Form(...),
+    model: str = Form("gpt-3.5-turbo"),
+    temperature: float = Form(0.7)
+):
     """
     Process a prompt using OpenAI API without any PDF file.
-    
+
     - prompt: The prompt to process
+    - model: OpenAI model to use (default: gpt-3.5-turbo)
+    - temperature: Controls randomness (0.0-2.0, default: 0.7)
     """
     start_time = time.time()
     request_id = f"prompt-{int(start_time)}"
@@ -230,7 +240,8 @@ async def prompt_only(prompt: str = Form(...)):
         logger.info(f"[{request_id}] Calling OpenAI API with prompt")
         api_start_time = time.time()
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=model,
+            temperature=temperature,
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
